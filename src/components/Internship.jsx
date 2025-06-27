@@ -49,7 +49,7 @@ const features = [
 function FeatureCard({ icon, title, description }) {
   return (
     <div style={{ width: '300px', textAlign: 'left', marginBottom: '1.5rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem'}}>
       <img src={icon} alt={title} style={{ width: '20px', height: '20px' }} />
         <h3 style={{ fontWeight: '400', color: 'var(--gray)', lineHeight: '1.2', fontSize: '20px', marginBottom: '5px', fontFamily: 'Lexend, sans-serif' }}>
           {title}
@@ -70,7 +70,7 @@ export default function Internship() {
         margin: '0 auto',
         padding: '64px 24px',
         textAlign: 'center',
-        fontStyle: 'normal'
+        fontStyle: 'normal',
       }}
     >
       <h2 style={{ fontSize: '28px', fontWeight: 500 , marginBottom: '48px', fontFamily: 'Lexend, sans-serif', lineHeight: 1.2 }}>
@@ -140,34 +140,20 @@ export default function Internship() {
           ></div>
         </div>
 
-        {/* First row of 3 features */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: '3rem',
-              flexWrap: 'nowrap',
-              marginBottom: '3rem',
-            }}
-          >
-            {features.slice(0, 3).map((f, i) => (
-              <FeatureCard key={i} {...f} />
-            ))}
-          </div>
-
-          {/* Second row of 3 features */}
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: '3rem',
-              flexWrap: 'nowrap',
-            }}
-          >
-            {features.slice(3, 6).map((f, i) => (
-              <FeatureCard key={i + 3} {...f} />
-            ))}
-          </div>
+        {/* Responsive grid for all features */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '3rem',
+            justifyItems: 'center',
+            marginTop: '3rem',
+          }}
+        >
+          {features.map((f, i) => (
+            <FeatureCard key={i} {...f} />
+          ))}
+        </div>
         </div>
   </div>
   );

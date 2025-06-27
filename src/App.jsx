@@ -1,4 +1,5 @@
-import { Navigation, Hero, AboutUs, Events, Internship, Team } from "./components"
+import { Navigation, Hero, AboutUs, Events, Internship, Team , Footer} from "./components"
+import './globals.css'
 
 function App() {
 

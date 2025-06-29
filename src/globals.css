@@ -1,8 +1,12 @@
 :root {
+  /* Colors Variables */
   --white: #fbfafb;
   --black: #010000;
   --gray: #373637;
   --primary: #3ae4d1;
   --secondary: #71b0b5;
   --icon-gradient: linear-gradient(to bottom, rgba(58, 228, 209, 1) 0%,rgba(40, 164, 150, 1) 100%);
+  /* Fonts Variables */
+  --title: "Lexend", serif;
+  --paragraph: "Poppins", sans-serif;
 }

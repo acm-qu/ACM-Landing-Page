@@ -12,32 +12,36 @@ const Hero = () => {
       description: "Solve real-world problems through hands-on projects in AI, data science, and more. Open to students after freshman year. No previous internship experience needed! Learn, grow, and build your future."
     },
     {
-      title: "Road To Big Tech",
-      description: "This dynamic discussion explored how higher education could pave the way to exciting career opportunities at top tech companies."
-    },
-    {
       title: "Winterbyte",
       description: "Gear up for the ultimate coding adventure! Solve, code, and master challenges over six action-packed sessions this winter, starting January 5th!"
+    },
+    {
+      title: "Road To Big Tech",
+      description: "This dynamic discussion explored how higher education could pave the way to exciting career opportunities at top tech companies."
     },
   ]
 
   return (
     <section id="hero">
-      <div id="hero-text" style={{ width: (450 * (139 / 51))+"px" }}>
-        <h2>Association for Computing Machinery</h2>
-        <HeroSplitter height={450} />
-        <h1>Qatar University Chapter</h1>
-        <p>Connecting students with the latest in technology and innovation.</p>
-      </div>
-      <div id="hero-cta">
-        <a href={partnerLink}>Partner with Us</a>
-        <a href={joinUsLink}>Join Us</a>
-      </div>
-      <div id="hero-partners">
-        <p>Trusted by</p>
-        <div>
-          <img src="/hero_qu_sa.png" height={54} alt="qatar-university-student-affairs" />
-          <img src="/hero_acm.png" height={54} alt="acm" />
+      <div>
+
+        <div id="hero-text">
+          <h2>Association for Computing Machinery</h2>
+          <HeroSplitter height={450} />
+          <img id="hero-splitter" src="/hero_heading_splitter.svg" />
+          <h1>Qatar University Chapter</h1>
+          <p>Connecting students with the latest in technology and innovation.</p>
+        </div>
+        <div id="hero-cta">
+          <a href={partnerLink}>Partner with Us</a>
+          <a href={joinUsLink}>Join Us</a>
+        </div>
+        <div id="hero-partners">
+          <p>Trusted by</p>
+          <div>
+            <img src="/hero_qu_sa.png" height={54} alt="qatar-university-student-affairs" />
+            <img src="/hero_acm.png" height={54} alt="acm" />
+          </div>
         </div>
       </div>
       <div id="hero-highlights">

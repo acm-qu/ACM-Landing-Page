@@ -7,6 +7,7 @@ const HeroSplitter = ({ height }) => (
     viewBox="-4 -15 1668 612"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className='hero-mobile-hide'
   >
     {/* ---- Curved Path ---- */}
     <path
@@ -14,10 +15,11 @@ const HeroSplitter = ({ height }) => (
       fill="none"
       stroke="rgb(55, 54, 55)"
       strokeWidth={2}
+
     />
 
     {/* ---- First Image + Shadow + Dashed Border ---- */}
-    <defs>
+    <defs >
       <filter
         id="filter-shadow-1"
         x="-0.056"

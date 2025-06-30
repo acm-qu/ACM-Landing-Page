@@ -1,5 +1,5 @@
 import React from "react";
-import placeholder from '../assets/placeholder.svg'; 
+import placeholder from '../assets/placeholder.svg';
 
 const teamMembers = [
   { name: "Anas Rustom", role: "President", image: placeholder, borderColor: 'var(--primary)' },
@@ -22,7 +22,7 @@ function TeamMemberCard({ name, role, image, borderColor }) {
         padding: '0 12px',
       }}
     >
-            <div
+      <div
         style={{
           width: '168px',              // w-24 = 6rem
           height: '168px',             // h-24 = 6rem
@@ -36,18 +36,18 @@ function TeamMemberCard({ name, role, image, borderColor }) {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-      <div
-        style={{
-          width: '144px',              // w-24 = 6rem
-          height: '144px',             // h-24 = 6rem
-          borderRadius: '50%',     // rounded-full
-          overflow: 'hidden',         // overflow-hidden
-          backgroundColor: 'white',
-          padding: '12px'
-        }}
-      >
-        <img src={image} alt={name} className="w-full h-full object-cover" />
-      </div>
+        <div
+          style={{
+            width: '144px',              // w-24 = 6rem
+            height: '144px',             // h-24 = 6rem
+            borderRadius: '50%',     // rounded-full
+            overflow: 'hidden',         // overflow-hidden
+            backgroundColor: 'white',
+            padding: '12px'
+          }}
+        >
+          <img src={image} alt={name} className="w-full h-full object-cover" />
+        </div>
       </div>
 
       <h4
@@ -110,6 +110,7 @@ export default function Team() {
 
   return (
     <section
+      id="team"
       style={{
         textAlign: 'center',
         margin: '0 auto',

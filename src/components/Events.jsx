@@ -2,7 +2,7 @@ import '../styles/events.css'
 
 const Events = () => {
   return (
-    <section>Events</section>
+    <section id="events">Events</section>
   )
 }
 

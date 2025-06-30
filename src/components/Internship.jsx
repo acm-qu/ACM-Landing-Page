@@ -49,13 +49,13 @@ const features = [
 function FeatureCard({ icon, title, description }) {
   return (
     <div style={{ width: '300px', textAlign: 'left', marginBottom: '1.5rem' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem'}}>
-      <img src={icon} alt={title} style={{ width: '20px', height: '20px' }} />
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.25rem' }}>
+        <img src={icon} alt={title} style={{ width: '20px', height: '20px' }} />
         <h3 style={{ fontWeight: '400', color: 'var(--gray)', lineHeight: '1.2', fontSize: '20px', marginBottom: '5px', fontFamily: 'Lexend, sans-serif' }}>
           {title}
         </h3>
       </div>
-      <p style={{ fontSize: '14px', color: 'var(--gray)', lineHeight: '1.2', margin: 0,  fontFamily: 'Poppins, sans-serif', letterSpacing: '1px'}}>
+      <p style={{ fontSize: '14px', color: 'var(--gray)', lineHeight: '1.2', margin: 0, fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
         {description}
       </p>
     </div>
@@ -65,6 +65,7 @@ function FeatureCard({ icon, title, description }) {
 export default function Internship() {
   return (
     <div
+      id="internship"
       style={{
         maxWidth: '1120px',
         margin: '0 auto',
@@ -73,13 +74,13 @@ export default function Internship() {
         fontStyle: 'normal',
       }}
     >
-      <h2 style={{ fontSize: '28px', fontWeight: 500 , marginBottom: '48px', fontFamily: 'Lexend, sans-serif', lineHeight: 1.2 }}>
-          Internship Program
-        </h2>
-        <p style={{ fontSize: '14px', color: 'var(--gray)', maxWidth: '722px', margin: '0 auto', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
-          A hands-on software engineering internship for QU students to build real tech solutions,
-          gain teamwork experience, and boost their careers.
-        </p>
+      <h2 style={{ fontSize: '28px', fontWeight: 500, marginBottom: '48px', fontFamily: 'Lexend, sans-serif', lineHeight: 1.2 }}>
+        Internship Program
+      </h2>
+      <p style={{ fontSize: '14px', color: 'var(--gray)', maxWidth: '722px', margin: '0 auto', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
+        A hands-on software engineering internship for QU students to build real tech solutions,
+        gain teamwork experience, and boost their careers.
+      </p>
 
       <div style={{ marginTop: '24px' }}>
         <button
@@ -154,7 +155,7 @@ export default function Internship() {
             <FeatureCard key={i} {...f} />
           ))}
         </div>
-        </div>
-  </div>
+      </div>
+    </div>
   );
 }

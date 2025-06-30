@@ -1,7 +1,7 @@
 import '../styles/about-us.css';
 
 const AboutUs = () => (
-  <section className="about-us">
+  <section className="about-us" id="mission">
     <header className="about-header">
       <h2>About us</h2>
     </header>

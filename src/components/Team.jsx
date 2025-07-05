@@ -4,7 +4,7 @@ import placeholder from '../assets/placeholder.svg';
 const teamMembers = [
   { name: "Anas Rustom", role: "President", image: placeholder, borderColor: 'var(--primary)' },
   { name: "Noor Soueid", role: "Vice-President", image: placeholder, borderColor: 'var(--primary)' },
-  { name: "I forgor", role: "Head of the PR Department", image: placeholder, borderColor: 'linear-gradient(to right, #e803fc, #e7b3f2)' },
+  { name: "Sifna Nasar", role: "Head of the PR Department", image: placeholder, borderColor: 'linear-gradient(to right, #e803fc, #e7b3f2)' },
   { name: "Amna Bushra", role: "Head of the Creative Department", image: placeholder, borderColor: 'linear-gradient(to top right, #84e0fa, #c0e1fc)' },
   { name: "TBD", role: "Head of the Tech Department", image: placeholder, borderColor: 'linear-gradient(to top right, #f57771, #f5b69d)' },
   { name: "Moaz Jemmieh & Sham Alkhais", role: "Head of the Event Planning Department", image: placeholder, borderColor: 'linear-gradient(to top right,#67fa4d, #c2f29b)' },

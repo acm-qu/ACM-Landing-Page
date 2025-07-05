@@ -1,0 +1,143 @@
+.eventHeading{
+    font-family: "Lexend";
+    font-size: 28px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+
+.eventContainer{
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 42px;
+}
+
+.eventContainerLeft{
+    /* background-color: green; */
+    display:grid;
+    grid-template-columns: .25fr 3px 1fr;
+    width:50%;
+    min-width: 487px;
+}
+
+.date{
+    text-align: right;
+    font-family: "Lexend";
+    font-size: 16px;
+    margin-top: 5px;
+    margin-right: 16px;
+}
+
+.line{
+    background-color: black;
+    position: relative;
+}
+
+.dot{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: #2fbbab;
+    border-radius:50%;
+    margin-top: 10px;
+}
+
+.diamondTop{
+    position:absolute;
+    background-color: black;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    left: -3px;
+}
+
+.eventCard{
+    margin-left: 25px;
+}
+
+.eventTitle{
+    font-family:"Lexend";
+    font-size: 24px;
+    color: #2fbbab;
+    margin-bottom: 10px;
+}
+
+.eventDesc{
+    font-family:"Poppins";
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.eventList{
+    margin-left: 20px;
+    line-height: 1.2;
+    margin-bottom: 36px;
+}
+
+.eventListItem{
+    margin-bottom: 10px;
+}
+
+.eventContainerRight{
+    /* background-color: blue; */
+    width:45%;
+}
+
+.highlight {
+    color: #2fbbab; 
+}
+
+.eventImageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 700px; 
+  aspect-ratio: 4 / 3; 
+  margin: 0 auto;
+}
+
+.eventImageContainer img {
+  position: absolute;
+  
+  height: auto;
+}
+
+.pointingPic {
+  top: 8%;
+  left: 45%;
+  z-index: 2; 
+  width: 45%;
+  box-shadow: 4px 4px 3px 0px #2fbbab;
+  
+}
+
+.teachingPic {
+  top: 20%;
+  left: 0%;
+  z-index: 1;
+  width: 55%;
+  box-shadow: 4px 4px 3px 0px #2fbbab;
+}
+
+.discussionPic {
+  top: 44%;
+  left: 45%;
+  z-index: 3;  
+  width: 40%;
+  box-shadow: 4px 4px 3px 0px #2fbbab;
+}
+
+@media (max-width: 936px){
+    .eventContainerLeft{
+        width: 90%;
+    }
+    .eventContainerRight{
+        width: 90%;
+    }
+}

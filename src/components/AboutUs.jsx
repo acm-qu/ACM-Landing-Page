@@ -6,32 +6,33 @@ const AboutUs = () => (
       <h2>About us</h2>
     </header>
 
-    <div className="about-grid">
-      <img
-        src="about-left-img.jpg"
-        alt="ACM members collaborating"
-        className="about-image"
-      />
+    <div className="about-content">
+      <div className="about-grid">
+        <img
+          src="about-left-img.jpg"
+          alt="ACM members collaborating"
+          className="about-image"
+        />
 
-      <div className="about-center">
-        <img src="about-us-logo.png" alt="acm" className="about-logo" />
+        <div className="about-center">
+          <img src="about-us-logo.png" alt="acm" className="about-logo" />
 
-        <div className="about-keywords">
-          <span>workshops</span>
-          <span>seminars</span>
-          <span>experience</span>
-          <span>networking</span>
-          <span>hackathons</span>
-          <span>student-led</span>
-          <span>hands-on</span>
+          <div className="about-description">
+            <p>
+              The Qatar University ACM Chapter is a <span className="highlight">student-led</span> group
+              focused on advancing computer science and technology. We
+              host <span className="highlight">workshops</span>, <span className="highlight">seminars</span>, and <span className="highlight">hackathons</span> to offer <span className="highlight">hands-on experience</span> and <span className="highlight">networking</span> for students passionate about
+              technology.
+            </p>
+          </div>
         </div>
-      </div>
 
-      <img
-        src="about-right-img.jpg"
-        alt="ACM members in session"
-        className="about-image"
-      />
+        <img
+          src="about-right-img.jpg"
+          alt="ACM members in session"
+          className="about-image"
+        />
+      </div>
     </div>
 
     <footer className="about-footer">

@@ -36,7 +36,12 @@ const AboutUs = () => (
 
     <footer className="about-footer">
       <div className="about-ticker">
-        {Array(4).fill('ASSOCIATION FOR COMPUTING MACHINERY ◆ ').join('')}
+        <div className="about-ticker-content">
+          {Array(6).fill('ASSOCIATION FOR COMPUTING MACHINERY ◆ ').join('')}
+        </div>
+        <div className="about-ticker-content">
+          {Array(6).fill('ASSOCIATION FOR COMPUTING MACHINERY ◆ ').join('')}
+        </div>
       </div>
     </footer>
   </section>

@@ -24,7 +24,6 @@ const Hero = () => {
   return (
     <section id="hero">
       <div>
-
         <div id="hero-text">
           <h2>Association for Computing Machinery</h2>
           <HeroSplitter height={450} />

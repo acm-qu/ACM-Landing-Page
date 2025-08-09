@@ -1,4 +1,5 @@
 #hero {
+  padding-top: 128px;
   #hero-text {
     width: 1226.4705882353px;
     letter-spacing: -1px;
@@ -106,8 +107,9 @@
 @media (max-width: 1250px) {
   #hero {
     width: 80%;
-    margin: 96px auto 0px auto;
+    margin: 64px auto 0px auto;
     display: flex;
+    scale: 1;
     flex-direction: row;
     .hero-mobile-hide {
       display: none;

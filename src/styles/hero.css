@@ -1,5 +1,6 @@
 #hero {
   padding-top: 128px;
+  width: 100%;
   #hero-text {
     width: 1226.4705882353px;
     letter-spacing: -1px;
@@ -112,6 +113,9 @@
     display: flex;
     scale: 1;
     flex-direction: row;
+    #hero-text {
+      width: fit-content;
+    }
     .hero-mobile-hide {
       display: none;
     }

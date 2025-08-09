@@ -168,3 +168,29 @@
     font-size: 1.5rem;
   }
 }
+
+@media (max-width: 500px) {
+  .navigation {
+    height: 60px;
+  }
+  .navigation-logo {
+    font-size: 1.25rem;
+  }
+  .mobile {
+    width: 36px;
+    height: 36px;
+    &::after {
+      top: 22px;
+      left: 50%;
+      translate: -50% -50%;
+      transform: rotate(0deg);
+    }
+    &::before {
+      top: 15px;
+      left: 50%;
+      translate: -50% -50%;
+      transform: rotate(0deg);
+    }
+  }
+  
+}

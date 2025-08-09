@@ -20,7 +20,6 @@
     display:grid;
     grid-template-columns: .25fr 3px 1fr;
     max-width: 600px;
-    min-width: 487px;
 }
 
 .date{

@@ -17,7 +17,7 @@ const Navigation = () => {
           <li><a href="#events">Events</a></li>
           <li><a href="#internship">Internship</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#team">Suggest</a></li>
+          <li><a href="#suggestion">Suggest</a></li>
         </ul>
         <a href="https://quqa.campuslabs.com/engage/organization/acm" target='_blank' className="join desktop">Join Us!</a>
         <div onClick={handleToggle} className={'mobile toggle ' + (active ? "active" : "")}></div>
@@ -28,7 +28,7 @@ const Navigation = () => {
           <li><a href="#events">Events</a></li>
           <li><a href="#internship">Internship</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#team">Suggest</a></li>
+          <li><a href="#suggestion">Suggest</a></li>
         </ul>
         <a href="https://quqa.campuslabs.com/engage/organization/acm" target='_blank' className="join">Join Us!</a>
       </div>

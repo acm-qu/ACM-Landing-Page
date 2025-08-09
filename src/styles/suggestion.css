@@ -1,0 +1,31 @@
+#suggestion {
+  margin-top: 64px;
+  margin-bottom: 128px;
+  display: grid;
+  gap: 24px;
+  place-items: center;
+  h2 {
+    text-align: center;
+    font-size: 32px;
+    padding: 0px 24px;
+  }
+  a {
+    background-color: var(--primary);
+    color: var(--black);
+    padding: 8px 32px;
+    border-radius: 99px;
+    text-decoration: none;
+  }
+}
+
+/*
+  backgroundColor: 'var(--primary)',
+  color: 'var(--black)',
+  fontWeight: '400',
+  fontFamily: 'Poppins, sans-serif',
+  letterSpacing: '1px',
+  padding: '5px 24px',
+  borderRadius: '9999px',
+  border: 'none',
+  cursor: 'pointer',
+*/

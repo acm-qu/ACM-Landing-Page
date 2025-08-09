@@ -1,4 +1,4 @@
-import { Navigation, Hero, AboutUs, Events, Internship, Team , Footer} from "./components"
+import { Navigation, Hero, AboutUs, Events, Internship, Team , Footer, Suggestion} from "./components"
 import './globals.css'
 
 function App() {
@@ -20,6 +20,8 @@ function App() {
         <Internship />
         {/* Team - Mariam */}
         <Team />
+        {/* Suggestion - Abdelhakim */}
+        <Suggestion />
       </main>
       <footer>
         {/* Footer - M. Al-Ansary */}

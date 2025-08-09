@@ -25,7 +25,7 @@ export default function Events() {
   ];
 
   return ( 
-    <div className='eventContainer'>
+    <div className='eventContainer' id='events'>
       <div className='eventContainerLeft'>
 
       <div></div> 

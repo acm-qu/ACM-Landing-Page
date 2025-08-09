@@ -68,7 +68,7 @@ export default function Internship() {
       id="internship"
       style={{
         maxWidth: '1120px',
-        margin: '0 auto',
+        margin: '72px auto',
         padding: '64px 24px',
         textAlign: 'center',
         fontStyle: 'normal',

@@ -3,13 +3,14 @@
     color: var(--white);
     display: flex;
     align-items: flex-start;
+    justify-content: center;
     padding: 3rem 2rem;
     font-family: var(--paragraph);
     gap: 4rem;
 }
 
 .footer-logo {
-    width: 120px;
+    width: 200px;
     filter: brightness(0) invert(1);
     flex-shrink: 0;
 }
@@ -17,7 +18,6 @@
 .cols {
     display: flex;
     gap: 4rem;
-    flex: 1;
     justify-content: flex-start;
 }
 
@@ -39,24 +39,29 @@
 }
 
 .col a {
+    display: inline-block;
     color: var(--white);
     text-decoration: none;
     font-size: 0.95rem;
     opacity: 0.9;
-    transition: opacity 0.2s ease;
+    width: 200px;
 }
 
 .col a:hover {
     opacity: 1;
-    color: var(--primary);
+    font-weight: 500;
 }
-
+@media (prefers-reduced-motion: no-preference) {
+    .col a {
+        transition: 0.2s ease;
+    }
+}
 /* Mobile styles */
 @media (max-width: 768px) {
     .site-footer {
         flex-direction: column;
         gap: 2rem;
-        padding: 2rem 1rem;
+        padding: 2rem 5rem;
     }
 
     .cols {

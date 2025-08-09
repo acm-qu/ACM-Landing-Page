@@ -3,7 +3,7 @@
     font-size: 28px;
     margin-left: 25px;
     margin-bottom: 25px;
-    font-weight: normal;
+    font-weight: 500;
 }
 
 .eventContainer{
@@ -12,14 +12,14 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2%;
-    margin-top: 42px;
+    margin-top: 128px;
 }
 
 .eventContainerLeft{
     /* background-color: green; */
     display:grid;
     grid-template-columns: .25fr 3px 1fr;
-    width:50%;
+    max-width: 600px;
     min-width: 487px;
 }
 
@@ -58,14 +58,17 @@
 }
 
 .eventCard{
-    margin-left: 25px;
+    margin-left: 24px;
 }
 
 .eventTitle{
-    font-family:"Lexend";
-    font-size: 24px;
-    color: #2fbbab;
-    margin-bottom: 10px;
+    a {
+        text-decoration: none;
+        font-family:"Lexend";
+        font-size: 24px;
+        color: #2fbbab;
+    }
+    margin-bottom: 12px;
 }
 
 .eventDesc{
@@ -82,7 +85,11 @@
 }
 
 .eventListItem{
-    margin-bottom: 10px;
+    list-style: none;
+    background: url('/events-bullet.png') left center no-repeat; 
+    padding-left: 28px; 
+    margin-bottom: 14px;
+    margin-left: -20px;
 }
 
 .eventContainerRight{
@@ -100,6 +107,7 @@
   max-width: 700px; 
   aspect-ratio: 4 / 3; 
   margin: 0 auto;
+  filter: drop-shadow(-4px -4px var(--primary));
 }
 
 .eventImageContainer img {
@@ -113,8 +121,7 @@
   left: 45%;
   z-index: 2; 
   width: 45%;
-  box-shadow: 4px 4px 3px 0px #2fbbab;
-  
+  box-shadow: 4px 4px 0px 0px #2fbbab;
 }
 
 .teachingPic {
@@ -122,7 +129,7 @@
   left: 0%;
   z-index: 1;
   width: 55%;
-  box-shadow: 4px 4px 3px 0px #2fbbab;
+  box-shadow: 4px 4px 0px 0px #2fbbab;
 }
 
 .discussionPic {
@@ -130,7 +137,7 @@
   left: 45%;
   z-index: 3;  
   width: 40%;
-  box-shadow: 4px 4px 3px 0px #2fbbab;
+  box-shadow: 4px 4px 0px 0px #2fbbab;
 }
 
 @media (max-width: 936px){

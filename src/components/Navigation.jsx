@@ -4,7 +4,7 @@ import '../styles/navigation.css'
 
 const Navigation = () => {
 
-  const [active, setActive] = useState(true)
+  const [active, setActive] = useState(false)
 
   const handleToggle = () => setActive(p => !p)
 

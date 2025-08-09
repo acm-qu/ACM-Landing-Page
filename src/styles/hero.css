@@ -86,11 +86,12 @@
     }
   }
 }
-@media (min-width: 1251px) {
+@media (min-width: 1351px) {
   #hero {
     display: block;
     width: fit-content;
     margin: 128px auto 0px auto;
+    scale: 1.1;
     #hero-splitter {
       display: none;
     }
@@ -104,7 +105,7 @@
     }
   }
 }
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
   #hero {
     width: 80%;
     margin: 64px auto 0px auto;

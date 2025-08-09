@@ -2,9 +2,9 @@ import '../styles/about-us.css';
 
 const AboutUs = () => (
   <section className="about-us" id="mission">
-    <header className="about-header">
+    <div className="about-header">
       <h2>About us</h2>
-    </header>
+    </div>
 
     <div className="about-content">
       <div className="about-grid">

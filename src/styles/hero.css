@@ -160,13 +160,13 @@
         font-size: 20px;
       }
       #hero-splitter {
-        width: 400px;
+        width: min(100%, 450px);
       }
       h1 {
-        font-size: 32px;
+        font-size: 30px;
       }
       p {
-        width: 35%;
+        width: 100%;
       }
     }
     #hero-partners {
@@ -199,10 +199,10 @@
         font-size: 18px;
       }
       #hero-splitter {
-        width: 350px;
+        width: 100%;
       }
       h1 {
-        font-size: 28px;
+        font-size: 26px;
       }
       p {
         width: 80vw;
@@ -255,7 +255,7 @@
         font-size: 17px;
       }
       #hero-splitter {
-        width: 310px;
+        width: 100%;
       }
       h1 {
         font-size: 25px;

@@ -196,42 +196,98 @@
     margin-top: 24px;
     #hero-text {
       h2 {
-        font-size: 14px;
+        font-size: 18px;
       }
       #hero-splitter {
-        width: 250px;
+        width: 350px;
       }
       h1 {
-        font-size: 21px;
+        font-size: 28px;
       }
       p {
         width: 80vw;
-        font-size: 12px;
+        font-size: 16px;
       }
     }
     #hero-cta {
-      font-size: 10px;
+      font-size: 16px;
       a {
-        padding: 8px 20px;
+        padding: 8px 24px;
       }
     }
     #hero-partners {
-      margin-top: 72px;
+      margin-top: 36px;
       gap: 16px;
       div {
         gap: 8px;
       }
       p {
-        font-size: 10px;
+        font-size: 14px;
       }
       img {
         height: 40px;
       }
     }
     #hero-highlights {
-      margin-top: 96px;
+      margin-top: 72px;
       #hero-highlights-title {
-        font-size: 12px;
+        font-size: 18px;
+      }
+      #hero-highlights-container {
+        .hero-highlight {
+          width: 100%;
+          h3 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  #hero {
+    margin-top: 24px;
+    #hero-text {
+      h2 {
+        font-size: 17px;
+      }
+      #hero-splitter {
+        width: 310px;
+      }
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        width: 80vw;
+        font-size: 16px;
+      }
+    }
+    #hero-cta {
+      font-size: 14px;
+      a {
+        padding: 8px 24px;
+      }
+    }
+    #hero-partners {
+      margin-top: 36px;
+      gap: 16px;
+      div {
+        gap: 8px;
+      }
+      p {
+        font-size: 14px;
+      }
+      img {
+        height: 40px;
+      }
+    }
+    #hero-highlights {
+      margin-top: 72px;
+      #hero-highlights-title {
+        font-size: 16px;
       }
       #hero-highlights-container {
         align-items: center;
@@ -240,10 +296,10 @@
         .hero-highlight {
           width: 100%;
           h3 {
-            font-size: 16px;
+            font-size: 20px;
           }
           p {
-            font-size: 12px;
+            font-size: 16px;
           }
         }
       }

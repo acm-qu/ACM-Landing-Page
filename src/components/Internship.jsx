@@ -55,7 +55,7 @@ function FeatureCard({ icon, title, description }) {
           {title}
         </h3>
       </div>
-      <p style={{ fontSize: '14px', color: 'var(--gray)', lineHeight: '1.2', margin: 0, fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
+      <p style={{ fontSize: '16px', color: 'var(--gray)', lineHeight: '1.2', margin: 0, fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
         {description}
       </p>
     </div>
@@ -77,7 +77,7 @@ export default function Internship() {
       <h2 style={{ fontSize: '28px', fontWeight: 500, marginBottom: '48px', fontFamily: 'Lexend, sans-serif', lineHeight: 1.2 }}>
         Internship Program
       </h2>
-      <p style={{ fontSize: '14px', color: 'var(--gray)', maxWidth: '722px', margin: '0 auto', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
+      <p style={{ fontSize: '16px', color: 'var(--gray)', maxWidth: '722px', margin: '0 auto', fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>
         A hands-on software engineering internship for QU students to build real tech solutions,
         gain teamwork experience, and boost their careers.
       </p>
@@ -96,7 +96,7 @@ export default function Internship() {
             cursor: 'pointer',
           }}
         >
-          Waitlist Now ➞
+          Coming Soon
         </button>
       </div>
 

@@ -1,4 +1,5 @@
 # ACM Qatar University Chapter - Landing Page
+_Pre-requisites: CMPS350 or Equivalent coding experience_  
 
 A quick overview of the main benefits and features of our club.
 

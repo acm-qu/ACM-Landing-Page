@@ -1,5 +1,4 @@
 export { default as Navigation } from './Navigation'
-export { default as Hero } from './Hero'
 export { default as AboutUs } from './AboutUs'
 export { default as Events } from './Events'
 export { default as Team } from './Team'

@@ -1,12 +1,10 @@
 import placeholder from '../assets/placeholder.svg';
 import lady from '/lady.jpg'
-import anas from '/anas.jpg'
 import moaz from '/moaz.jpg'
 import mohamed from '/mohamed.jpg'
 
 const teamMembers = [
-  { name: "Anas Rustom", role: "President", image: anas, borderColor: 'var(--primary)' },
-  { name: "Noor Soueid", role: "Vice-President", image: lady, borderColor: 'var(--primary)' },
+  { name: "Noor Soueid", role: "President", image: lady, borderColor: 'var(--primary)' },
   { name: "Sifna Nasar", role: "Head of the PR Department", image: lady, borderColor: 'linear-gradient(to right, #e803fc, #e7b3f2)' },
   { name: "Amna Bushra", role: "Head of the Creative Department", image: lady, borderColor: 'linear-gradient(to top right, #84e0fa, #c0e1fc)' },
   { name: "Moaz Jemmieh", role: "Head of the Event Planning Department", image: moaz, borderColor: 'linear-gradient(to top right, #67fa4d, #c2f29b)' },

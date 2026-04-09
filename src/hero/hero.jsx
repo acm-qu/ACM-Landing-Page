@@ -12,17 +12,23 @@ import { motion } from 'motion/react'
 const Hero = () => {
   const [typedDescription, setTypedDescription] = useState('')
 
+  const descriptionWordCount = DESCRIPTION.split(' ').length
+  const typingDuration = descriptionWordCount * 0.28 // 0.28 seconds per word
+
+  const startDelay = 2200
+
   useEffect(() => {
     let currentIndex = 0
     let timeoutId
 
-    const startDelay = 2200
     const typeNextCharacter = () => {
       currentIndex += 1
       setTypedDescription(DESCRIPTION.slice(0, currentIndex))
 
       if (currentIndex < DESCRIPTION.length) {
-        timeoutId = window.setTimeout(typeNextCharacter, 28)
+        const durationPerCharacter = typingDuration / DESCRIPTION.length
+        
+        timeoutId = window.setTimeout(typeNextCharacter, durationPerCharacter * 1000)
       }
     }
 
@@ -62,8 +68,8 @@ const Hero = () => {
             {typedDescription}
             <motion.span
               aria-hidden="true"
-              animate={{ opacity: [1, 0] }}
-              transition={{ duration: 0.8, ease: 'linear', repeat: 5, repeatType: 'loop' }}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{ duration: 0.8, ease: 'linear', repeat: Math.ceil(typingDuration), repeatType: 'loop', delay: startDelay / 1000 }}
             >
               |
             </motion.span>

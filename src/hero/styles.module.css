@@ -1,7 +1,12 @@
 .hero {
-  margin-top: 196px;
+  margin: 256px auto 0px auto;
+  position: relative;
+  width: fit-content;
   > .container {
     > .text {
+      > .mobileSplitter {
+        display: none;
+      }
       > .subtitle, > .title {
         overflow: hidden;
         white-space: nowrap;
@@ -10,13 +15,81 @@
         margin-bottom: -112px;
       }
       > .title {
-        position: relative;
-        top: -350px;
-        font-size: 40px;
+        position: absolute;
+        top: 44px;
+        font-size: 44px;
       }
       > .description {
+        position: absolute;
+        top: 114px;
+      }
+    }
+    > .ctaContainer {
+      display: flex;
+      gap: 12px;
+      position: absolute;
+      top: 196px;
+      > .cta {
+        all: unset;
+        cursor: pointer;
+        font-weight: 600;
+        padding: 8px 32px;
+        border-radius: 99px;
+      }
+      > .cta.one {
+        background-color: var(--gray);
+        color: white;
+      }
+      > .cta.two {
+        background-color: var(--primary);
+        color: var(--gray);
+      }
+    }
+    > .partners {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: absolute;
+      top: 264px;
+      > .label {
+        color: var(--light-gray);
+        font-size: 14px;
+      }
+      > .images {
+        display: flex;
+        gap: 8px;
+        filter: grayscale(1) opacity(0.8);
+      }
+    }
+  }
+  > .highlights {
+    > .label {
+      color: var(--light-gray);
+      text-transform: uppercase;
+      letter-spacing: 8px;
+    }
+    > .container {
+      display: flex;
+      gap: 32px;
+      width: 75vw;
+      > .highlight {
+        flex: 1 1 0;
         position: relative;
-        top: -320px;
+        > .background {
+          position: absolute;
+          background-color: var(--gray);
+          width: 100%;
+          height: 100%;
+        }
+        > .title {
+          color: var(--primary-dark);
+          font-weight: 500;
+          font-size: 24px;
+          margin: 8px 0px 12px 0px;
+        }
+        > .description {
+          color: var(--gray);
+        }
       }
     }
   }

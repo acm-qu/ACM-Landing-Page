@@ -2,10 +2,9 @@ import DesktopSplitter from './assets/splitter'
 import classes from './styles.module.css'
 import { useEffect, useState } from 'react'
 
-import { subtitleTransition } from './transitions'
+import { subtitleTransition, highlightTransition, ctaAndTrustedByTransition } from './transitions'
 
-import { SUBTITLE, TITLE, DESCRIPTION, CTA_1, CTA_2 } from './content'
-import { JOIN_US, PARTNER, HIGHLIGHTS } from './constants'
+import { SUBTITLE, TITLE, DESCRIPTION, CTA_1, CTA_2, CTA_1_LINK, CTA_2_LINK, HIGHLIGHTS } from './content'
 
 import { motion } from 'motion/react'
 
@@ -75,26 +74,49 @@ const Hero = () => {
             </motion.span>
           </motion.p>
         </div>
-        <div className={classes.heroCta}>
-          <a href={PARTNER}>{CTA_2}</a>
-          <a href={JOIN_US}>{CTA_1}</a>
-        </div>
-        <div className={classes.heroPartners}>
-          <p>Trusted by</p>
-          <div>
+        <motion.div 
+          className={classes.ctaContainer}
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={ctaAndTrustedByTransition}
+        >
+          <a className={`${classes.cta} ${classes.one}`} target='_blank' href={CTA_1_LINK}>{CTA_1}</a>
+          <a className={`${classes.cta} ${classes.two}`} target='_blank' href={CTA_2_LINK}>{CTA_2}</a>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={ctaAndTrustedByTransition}
+          className={classes.partners}>
+          <p className={classes.label}>Trusted by</p>
+          <div className={classes.images}>
             <img src="/hero_qu_sa.png" height={54} alt="qatar-university-student-affairs" />
             <img src="/hero_acm.png" height={54} alt="acm" />
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className={classes.heroHighlights}>
-        <p className={classes.heroHighlightsTitle}>Highlights</p>
-        <div className={classes.heroHighlightsContainer}>
-          {HIGHLIGHTS.map(highlight => (
-            <div className={classes.heroHighlight} key={highlight.title}>
-              <h3>{highlight.title}</h3>
-              <p>{highlight.description}</p>
-            </div>
+      <div className={classes.highlights}>
+        <motion.p 
+          className={classes.label}
+          initial={{ clipPath: "inset(100% 0 0 0)", y: 28 }}
+          animate={{ clipPath: "inset(0 0 0 0)", y: 0 }}
+          transition={{
+            ...subtitleTransition,
+            delay: subtitleTransition.delay + 2
+          }}>Highlights</motion.p>
+        <div className={classes.container}>
+          {HIGHLIGHTS.map((highlight, i) => (
+            <motion.div
+              animate={{ scale: [0, 1, 1] }}
+              transition={highlightTransition}
+              className={classes.highlight} key={highlight.title}>
+              <motion.div
+                animate={{ height: ["100%", "100%", "0%"] }}
+                transition={{...highlightTransition, delay: highlightTransition.delay + i * 0.3}}
+                className={classes.background} />
+              <h3 className={classes.title}>{highlight.title}</h3>
+              <p className={classes.description}>{highlight.description}</p>
+            </motion.div>
           ))}
         </div>
       </div>

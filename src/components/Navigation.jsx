@@ -15,7 +15,7 @@ const Navigation = () => {
         <ul className="navigation-links desktop">
           <li><a href="#mission">Mission</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="#internship">Internship</a></li>
+          {/* <li><a href="#internship">Internship</a></li> - Disabled until implementation */}
           <li><a href="#team">Team</a></li>
           <li><a href="#suggestion">Suggest</a></li>
         </ul>
@@ -26,7 +26,7 @@ const Navigation = () => {
         <ul className="navigation-links">
           <li><a href="#mission">Mission</a></li>
           <li><a href="#events">Events</a></li>
-          <li><a href="#internship">Internship</a></li>
+          {/* <li><a href="#internship">Internship</a></li> - Disabled until implementation */}
           <li><a href="#team">Team</a></li>
           <li><a href="#suggestion">Suggest</a></li>
         </ul>

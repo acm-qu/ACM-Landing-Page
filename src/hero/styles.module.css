@@ -1,0 +1,23 @@
+.hero {
+  margin-top: 196px;
+  > .container {
+    > .text {
+      > .subtitle, > .title {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      > .subtitle {
+        margin-bottom: -112px;
+      }
+      > .title {
+        position: relative;
+        top: -350px;
+        font-size: 40px;
+      }
+      > .description {
+        position: relative;
+        top: -320px;
+      }
+    }
+  }
+}

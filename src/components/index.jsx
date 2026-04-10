@@ -1,7 +1,3 @@
-export { default as Navigation } from './Navigation'
-export { default as AboutUs } from './AboutUs'
-export { default as Events } from './Events'
-export { default as Team } from './Team'
 export { default as Internship } from './Internship'
 export { default as Footer } from './Footer'
 export { default as Suggestion } from './Suggestion'

@@ -1,6 +1,13 @@
-import '../styles/about-us.css';
+import './about-us.css';
+import { Fragment } from 'react/jsx-runtime';
+import { ABOUT_US } from './content';
+import { parseAboutUs } from '../../util';
 
-const AboutUs = () => (
+const AboutUs = () => {
+  
+  const aboutUs = parseAboutUs(ABOUT_US);
+
+  return (
   <section className="about-us" id="mission">
     <div className="about-header">
       <h2>About us</h2>
@@ -9,26 +16,22 @@ const AboutUs = () => (
     <div className="about-content">
       <div className="about-grid">
         <img
-          src="about-left-img.jpg"
+          src="/about-us/about-left-img.jpg"
           alt="ACM members collaborating"
           className="about-image"
         />
 
         <div className="about-center">
-          <img src="about-us-logo.png" alt="acm" className="about-logo" />
-
+          <img src="/about-us/about-us-logo.png" alt="acm" className="about-logo" />
           <div className="about-description">
             <p>
-              The Qatar University ACM Chapter is a <span className="highlight">student-led</span> group
-              focused on advancing computer science and technology. We
-              host <span className="highlight">workshops</span>, <span className="highlight">seminars</span>, and <span className="highlight">hackathons</span> to offer <span className="highlight">hands-on experience</span> and <span className="highlight">networking</span> for students passionate about
-              technology.
+              {aboutUs.map((word, i) => <Fragment key={i}>{word} </Fragment>)}
             </p>
           </div>
         </div>
 
         <img
-          src="about-right-img.jpg"
+          src="/about-us/about-right-img.jpg"
           alt="ACM members in session"
           className="about-image"
         />
@@ -46,6 +49,7 @@ const AboutUs = () => (
       </div>
     </footer>
   </section>
-);
+  )
+};
 
 export default AboutUs;

@@ -16,8 +16,8 @@ export const HIGHLIGHTS: readonly IHighlight[] = [
     description: "Collaborated with CamelCode to deliver interactive sessions on Capture The Flag (CTF) competitions, equipping students with essential cybersecurity skills and hands-on experience in ethical hacking."
   },
   {
-    title: "Winterbyte",
-    description: "Gear up for the ultimate coding adventure! Solve, code, and master challenges over six action-packed sessions this winter, starting January 5th!"
+    title: "ACM X JPC - Winterbyte",
+    description: "Collaborated with JPC to deliver engaging sessions on competitive programming, consistently challenging students to enhance their problem-solving, data structures, and algorithm skills."
   },
   {
     title: "Road To Big Tech",
@@ -27,4 +27,4 @@ export const HIGHLIGHTS: readonly IHighlight[] = [
     title: "Cyber Awareness 101",
     description: "This session focused on raising awareness about cybersecurity threats and best practices for staying safe online."
   },
-] as const
+]

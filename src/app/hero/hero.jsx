@@ -6,8 +6,8 @@ import DesktopSplitter from './assets/splitter'
 import { SUBTITLE, TITLE, DESCRIPTION, CTA_1, CTA_2, CTA_1_LINK, CTA_2_LINK, HIGHLIGHTS } from './content'
 import { subtitleTransition, highlightTransition, ctaAndTrustedByTransition } from './transitions'
 
-import { truncate } from '../util/truncate'
-import { useResponsive } from '../hooks/use-responsive'
+import { truncate } from '../../util/truncate'
+import { useResponsive } from '../../hooks/use-responsive'
 
 import classes from './styles.module.css'
 
@@ -30,7 +30,7 @@ const Hero = () => {
 
       if (currentIndex < DESCRIPTION.length) {
         const durationPerCharacter = typingDuration / DESCRIPTION.length
-        
+
         timeoutId = window.setTimeout(typeNextCharacter, durationPerCharacter * 1000)
       }
     }
@@ -44,12 +44,12 @@ const Hero = () => {
   }, [])
 
   // Truncated highlights array
-  const { isDesktop, isMobile, isBigTablet } = useResponsive()
+  const { isDesktop, isMobile, isBigTablet, isTablet } = useResponsive()
 
   const displayedHighlights = useMemo(() => (isBigTablet || isDesktop) ? truncate(HIGHLIGHTS, 3) : HIGHLIGHTS, [isBigTablet, isDesktop])
 
   return (
-    <section className={`${classes.hero} ${isMobile ? classes.mobile : ''}`}>
+    <section id="hero" className={`${classes.hero} ${isMobile ? classes.mobile : isBigTablet ? classes.bigTablet : isTablet ? classes.tablet : ''}`}>
       <div className={classes.container}>
         <div className={`${classes.text} ${isMobile ? classes.mobile : ''}`}>
           <motion.h2
@@ -82,7 +82,7 @@ const Hero = () => {
             </motion.span>
           </motion.p>
         </div>
-        <motion.div 
+        <motion.div
           className={`${classes.ctaContainer} ${isMobile ? classes.mobile : ''}`}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -98,13 +98,13 @@ const Hero = () => {
           className={`${classes.partners} ${isMobile ? classes.mobile : ''}`}>
           <p className={classes.label}>Trusted by</p>
           <div className={classes.images}>
-            <img src="/hero_qu_sa.png" height={54} alt="qatar-university-student-affairs" />
-            <img src="/hero_acm.png" height={54} alt="acm" />
+            <img src="/hero/hero-qu-sa.png" height={54} alt="qatar-university-student-affairs" />
+            <img src="/hero/hero-acm.png" height={54} alt="acm" />
           </div>
         </motion.div>
       </div>
       <div className={`${classes.highlights} ${isMobile ? classes.mobile : ''}`}>
-        <motion.p 
+        <motion.p
           className={classes.label}
           initial={{ clipPath: "inset(100% 0 0 0)", y: 28 }}
           animate={{ clipPath: "inset(0 0 0 0)", y: 0 }}
@@ -120,7 +120,7 @@ const Hero = () => {
               className={classes.highlight} key={highlight.title}>
               <motion.div
                 animate={{ height: ["100%", "100%", "0%"] }}
-                transition={{...highlightTransition, delay: highlightTransition.delay + i * 0.3}}
+                transition={{ ...highlightTransition, delay: highlightTransition.delay + i * 0.3 }}
                 className={classes.background} />
               <h3 className={classes.title}>{highlight.title}</h3>
               <p className={classes.description}>{highlight.description}</p>

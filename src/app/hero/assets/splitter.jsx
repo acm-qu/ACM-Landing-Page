@@ -1,13 +1,14 @@
 import { motion } from "motion/react";
 import { AnimatePresence } from "motion/react";
 import { curvesTransition, filteredImageTransition, imageTransition, lineTransition, markerTransition, rotatingDashTransition, opacityTransition } from "./transitions";
-import { useResponsive } from "../../hooks/use-responsive";
+import { useResponsive } from "../../../hooks/use-responsive";
 
 const Splitter = ({ height }) => {
 
   const ASPECT_RATIO = 139 / 51;
   const { isDesktop } = useResponsive();
 
+  // Don't forget to update the image dimensions when changing images
   return (
     <svg
       minWidth={height * ASPECT_RATIO}
@@ -18,29 +19,29 @@ const Splitter = ({ height }) => {
     >
       {/* ---- Curved Path ---- */}
       <AnimatePresence>
-        {isDesktop && 
-        <>
-          <motion.path
-            d="M811.5,152C811.5,152,1104,169,1347,100"
-            fill="none"
-            stroke="rgb(55, 54, 55)"
-            strokeWidth={2}
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={curvesTransition}
-            exit={{ pathLength: 0, transition: { delay: 0 } }}
-          />
-          <motion.path
-            d="M811.5,152 C811.5,152,1024,150,1084,289"
-            fill="none"
-            stroke="rgb(55, 54, 55)"
-            strokeWidth={2}
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={curvesTransition}
-            exit={{ pathLength: 0, transition: { delay: 0 } }}
-          />
-        </>}
+        {isDesktop &&
+          <>
+            <motion.path
+              d="M811.5,152C811.5,152,1104,169,1347,100"
+              fill="none"
+              stroke="rgb(55, 54, 55)"
+              strokeWidth={2}
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={curvesTransition}
+              exit={{ pathLength: 0, transition: { delay: 0 } }}
+            />
+            <motion.path
+              d="M811.5,152 C811.5,152,1024,150,1084,289"
+              fill="none"
+              stroke="rgb(55, 54, 55)"
+              strokeWidth={2}
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={curvesTransition}
+              exit={{ pathLength: 0, transition: { delay: 0 } }}
+            />
+          </>}
       </AnimatePresence>
 
       {/* ---- First Image + Shadow + Dashed Border ---- */}
@@ -191,7 +192,7 @@ const Splitter = ({ height }) => {
         </marker>
       </defs>
       <AnimatePresence>
-        {isDesktop && 
+        {isDesktop &&
           <>
             {/* First image */}
             <motion.rect
@@ -243,14 +244,14 @@ const Splitter = ({ height }) => {
                 strokeDashoffset: rotatingDashTransition,
                 opacity: opacityTransition,
                 height: filteredImageTransition
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-              transition: {
-                delay: 0
-              }
-            }}
+              }}
+              exit={{
+                height: 0,
+                opacity: 0,
+                transition: {
+                  delay: 0
+                }
+              }}
             />
 
             {/* Second image */}
@@ -262,13 +263,13 @@ const Splitter = ({ height }) => {
               animate={{ height: 311 }}
               transition={filteredImageTransition}
               fill="url(#img-pattern-filtered-2)"
-            filter="url(#filter-shadow-2)"
-            exit={{
-              height: 0,
-              transition: {
-                delay: 0
-              }
-            }}
+              filter="url(#filter-shadow-2)"
+              exit={{
+                height: 0,
+                transition: {
+                  delay: 0
+                }
+              }}
             />
             <motion.rect
               x="1338"
@@ -278,13 +279,13 @@ const Splitter = ({ height }) => {
               animate={{ height: 311 }}
               transition={imageTransition}
               fill="url(#img-pattern-2)"
-            filter="url(#filter-shadow-2)"
-            exit={{
-              height: 0,
-              transition: {
-                delay: 0
-              }
-            }}
+              filter="url(#filter-shadow-2)"
+              exit={{
+                height: 0,
+                transition: {
+                  delay: 0
+                }
+              }}
             />
             {/* Second dashed border */}
             <motion.rect
@@ -301,14 +302,14 @@ const Splitter = ({ height }) => {
                 strokeDashoffset: rotatingDashTransition,
                 opacity: opacityTransition,
                 height: filteredImageTransition
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-              transition: {
-                delay: 0
-              }
-            }}
+              }}
+              exit={{
+                height: 0,
+                opacity: 0,
+                transition: {
+                  delay: 0
+                }
+              }}
             />
           </>
         }

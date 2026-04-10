@@ -1,6 +1,8 @@
 .hero {
   margin: 256px auto 0px auto;
-  &.mobile { margin: 156px auto 0px auto;  }
+  &.bigTablet { margin: 200px auto 0px auto }
+  &.tablet { margin: 172px auto 0px auto }
+  &.mobile { margin: 156px auto 0px auto }
   position: relative;
   width: fit-content;
   overflow-x: clip;
@@ -129,13 +131,16 @@
     }
     &.mobile {
       margin-top: 112px;
-      > .container > .highlight {
-        > .title {
-          font-size: 20px;
-        }
-        > .description {
-          color: var(--gray);
-          font-size: 14px;
+      > .container {
+        gap: 16px;
+        > .highlight {
+          > .title {
+            font-size: 20px;
+          }
+          > .description {
+            color: var(--gray);
+            font-size: 14px;
+          }
         }
       }
     }

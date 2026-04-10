@@ -1,0 +1,31 @@
+@keyframes orbit {
+  from {
+    rotate: var(--from);
+  }
+  to {
+    rotate: var(--to);
+  }
+}
+
+.team-member {
+  .to-expand {
+    top: 0px;
+    opacity: 0;
+    height: calc(50%);
+    transition: 1s cubic-bezier(0.00, 0.85, 0.42, 1.00);
+  }
+  .border {
+    scale: 0.8;
+    transition: 1s cubic-bezier(0.00, 0.85, 0.42, 1.00);
+  }
+  &:hover {
+    .to-expand {
+      top: -24px;
+      opacity: 1;
+      height: calc(50% + 24px);
+    }
+    .border {
+      scale: 1.15;
+    }
+  }
+}

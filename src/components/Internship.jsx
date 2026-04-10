@@ -1,4 +1,3 @@
-import React from "react";
 import RealWorld from '../assets/real-world.svg';
 import TeamBased from '../assets/team-based.svg';
 import Technical from '../assets/technical-training.svg';

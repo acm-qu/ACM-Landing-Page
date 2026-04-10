@@ -20,7 +20,7 @@ const curvesTransition = {
 }
 
 const rotatingDashTransition = {
-  duration: 5,
+  duration: 4,
   ease: "linear",
   repeat: Infinity,
   repeatType: "loop",

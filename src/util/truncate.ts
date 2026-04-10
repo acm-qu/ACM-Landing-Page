@@ -13,7 +13,7 @@ export const truncate:TruncateParams = (obj, maxLength, type) => {
       case "ellipsis":
         return obj.slice(0, maxLength) + "...";
       case "date":
-        return obj.slice(0, maxLength) + "..."
+        return obj.slice(2, maxLength).split(" - ").reverse().join(" - ");
       default:
         return obj.slice(0, maxLength)
     }

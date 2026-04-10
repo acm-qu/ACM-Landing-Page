@@ -1,5 +1,9 @@
-import { Navigation, AboutUs, Events, /* Internship, */ Team , Footer, Suggestion } from "./components"
+import { /* Internship, */ Footer, Suggestion } from "../components"
 import Hero from "./hero/Hero"
+import AboutUs from "./about-us/about-us"
+import Navigation from "./navigation/Navigation"
+import Team from "./team/Team"
+import Events from "./events/Events"
 import './globals.css'
 
 function App() {
@@ -19,7 +23,7 @@ function App() {
         <Events />
         {/* Internship - Mariam */}
 
-        {/* <Internship /> - Disabled until we actually have the program */} 
+        {/* <Internship /> - Disabled until we actually have the program */}
 
         {/* Team - Mariam */}
         <Team />

@@ -1,16 +1,16 @@
 import type { IHighlight } from "./types"
 
-const SUBTITLE = "Association for Computing Machinery"
-const TITLE = "Qatar University Chapter"
-const DESCRIPTION = "Connecting students with the latest in technology and innovation."
+export const SUBTITLE = "Association for Computing Machinery"
+export const TITLE = "Qatar University Chapter"
+export const DESCRIPTION = "Connecting students with the latest technology and innovation."
 
-const CTA_1 = "Partner With Us"
-const CTA_1_LINK = "https://www.linkedin.com/company/acm-qu/"
+export const CTA_1 = "Partner With Us"
+export const CTA_1_LINK = "https://www.linkedin.com/company/acm-qu/"
 
-const CTA_2 = "Join Us"
-const CTA_2_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSeMDk3-5B0A2m6yAqwkqPPebE9fP1FXSupT32dYmOeeUHsvbA/closedform"
+export const CTA_2 = "Join Us"
+export const CTA_2_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSeMDk3-5B0A2m6yAqwkqPPebE9fP1FXSupT32dYmOeeUHsvbA/closedform"
 
-const HIGHLIGHTS: readonly IHighlight[] = [
+export const HIGHLIGHTS: readonly IHighlight[] = [
   {
     title: "ACM X Camelcode - CTF",
     description: "Collaborated with CamelCode to deliver interactive sessions on Capture The Flag (CTF) competitions, equipping students with essential cybersecurity skills and hands-on experience in ethical hacking."
@@ -23,6 +23,8 @@ const HIGHLIGHTS: readonly IHighlight[] = [
     title: "Road To Big Tech",
     description: "This dynamic discussion explored how higher education could pave the way to exciting career opportunities at top tech companies."
   },
+  {
+    title: "Cyber Awareness 101",
+    description: "This session focused on raising awareness about cybersecurity threats and best practices for staying safe online."
+  },
 ] as const
-
-export { SUBTITLE, TITLE, DESCRIPTION, CTA_1, CTA_1_LINK, CTA_2, CTA_2_LINK, HIGHLIGHTS }

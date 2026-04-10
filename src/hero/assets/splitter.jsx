@@ -1,38 +1,47 @@
 import { motion } from "motion/react";
+import { AnimatePresence } from "motion/react";
 import { curvesTransition, filteredImageTransition, imageTransition, lineTransition, markerTransition, rotatingDashTransition, opacityTransition } from "./transitions";
+import { useResponsive } from "../../hooks/use-responsive";
 
 const Splitter = ({ height }) => {
 
   const ASPECT_RATIO = 139 / 51;
+  const { isDesktop } = useResponsive();
 
   return (
     <svg
-      width={height * ASPECT_RATIO}
+      minWidth={height * ASPECT_RATIO}
       height={height}
       viewBox="-4 -15 1668 612"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className='hero-mobile-hide'
     >
       {/* ---- Curved Path ---- */}
-      <motion.path
-        d="M811.5,152C811.5,152,1104,169,1347,100"
-        fill="none"
-        stroke="rgb(55, 54, 55)"
-        strokeWidth={2}
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={curvesTransition}
-      />
-      <motion.path
-        d="M811.5,152 C811.5,152,1024,150,1084,289"
-        fill="none"
-        stroke="rgb(55, 54, 55)"
-        strokeWidth={2}
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={curvesTransition}
-      />
+      <AnimatePresence>
+        {isDesktop && 
+        <>
+          <motion.path
+            d="M811.5,152C811.5,152,1104,169,1347,100"
+            fill="none"
+            stroke="rgb(55, 54, 55)"
+            strokeWidth={2}
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={curvesTransition}
+            exit={{ pathLength: 0, transition: { delay: 0 } }}
+          />
+          <motion.path
+            d="M811.5,152 C811.5,152,1024,150,1084,289"
+            fill="none"
+            stroke="rgb(55, 54, 55)"
+            strokeWidth={2}
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={curvesTransition}
+            exit={{ pathLength: 0, transition: { delay: 0 } }}
+          />
+        </>}
+      </AnimatePresence>
 
       {/* ---- First Image + Shadow + Dashed Border ---- */}
       <defs >
@@ -181,84 +190,129 @@ const Splitter = ({ height }) => {
           />
         </marker>
       </defs>
+      <AnimatePresence>
+        {isDesktop && 
+          <>
+            {/* First image */}
+            <motion.rect
+              key="filtered-1"
+              x="822"
+              y="260"
+              width="464"
+              initial={{ height: 0 }}
+              animate={{ height: 310 }}
+              transition={filteredImageTransition}
+              fill="url(#img-pattern-filtered-1)"
+              filter="url(#filter-shadow-1)"
+              exit={{
+                height: 0,
+                transition: {
+                  delay: 0
+                }
+              }}
+            />
+            <motion.rect
+              key="image-1"
+              x="822"
+              y="260"
+              width="464"
+              initial={{ height: 0 }}
+              animate={{ height: 310 }}
+              transition={imageTransition}
+              fill="url(#img-pattern-1)"
+              filter="url(#filter-shadow-1)"
+              exit={{
+                height: 0,
+                transition: {
+                  delay: 0
+                }
+              }}
+            />
+            {/* First dashed border */}
+            <motion.rect
+              x="822"
+              y="260"
+              width="464"
+              fill="none"
+              stroke="rgb(55, 54, 55)"
+              strokeWidth={4}
+              strokeDasharray="12 12"
+              initial={{ strokeDashoffset: 24, opacity: 0, height: 0 }}
+              animate={{ strokeDashoffset: 0, opacity: 1, height: 310 }}
+              transition={{
+                strokeDashoffset: rotatingDashTransition,
+                opacity: opacityTransition,
+                height: filteredImageTransition
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              transition: {
+                delay: 0
+              }
+            }}
+            />
 
-      {/* First image */}
-      <motion.rect
-        x="822"
-        y="260"
-        width="464"
-        initial={{ height: 0 }}
-        animate={{ height: 310 }}
-        transition={filteredImageTransition}
-        fill="url(#img-pattern-filtered-1)"
-        filter="url(#filter-shadow-1)"
-      />
-      <motion.rect
-        x="822"
-        y="260"
-        width="464"
-        initial={{ height: 0 }}
-        animate={{ height: 310 }}
-        transition={imageTransition}
-        fill="url(#img-pattern-1)"
-        filter="url(#filter-shadow-1)"
-      />
-      {/* First dashed border */}
-      <motion.rect
-        x="822"
-        y="260"
-        width="464"
-        fill="none"
-        stroke="rgb(55, 54, 55)"
-        strokeWidth={4}
-        strokeDasharray="12 12"
-        initial={{ strokeDashoffset: 24, opacity: 0, height: 0 }}
-        animate={{ strokeDashoffset: 0, opacity: 1, height: 310 }}
-        transition={{
-          strokeDashoffset: rotatingDashTransition,
-          opacity: opacityTransition,
-          height: filteredImageTransition
-        }}
-      />
-
-      {/* Second image */}
-      <motion.rect
-        x="1338"
-        y="0"
-        width="311"
-        initial={{ height: 0 }}
-        animate={{ height: 311 }}
-        transition={filteredImageTransition}
-        fill="url(#img-pattern-filtered-2)"
-        filter="url(#filter-shadow-2)"
-      />
-      <motion.rect
-        x="1338"
-        y="0"
-        width="311"
-        initial={{ height: 0 }}
-        animate={{ height: 311 }}
-        transition={imageTransition}
-        fill="url(#img-pattern-2)"
-        filter="url(#filter-shadow-2)"
-      />
-      {/* Second dashed border */}
-      <motion.rect
-        x="1338"
-        y="0"
-        width="311"
-        fill="none"
-        stroke="rgb(55, 54, 55)"
-        strokeWidth={4}
-        strokeDasharray="12 12"
-        initial={{ strokeDashoffset: 24, opacity: 0, height: 0 }}
-        animate={{ strokeDashoffset: 0, opacity: 1, height: 311 }}
-        transition={{
-          strokeDashoffset: rotatingDashTransition,
-          opacity: opacityTransition,
-          height: filteredImageTransition
-        }}
-      />
+            {/* Second image */}
+            <motion.rect
+              x="1338"
+              y="0"
+              width="311"
+              initial={{ height: 0 }}
+              animate={{ height: 311 }}
+              transition={filteredImageTransition}
+              fill="url(#img-pattern-filtered-2)"
+            filter="url(#filter-shadow-2)"
+            exit={{
+              height: 0,
+              transition: {
+                delay: 0
+              }
+            }}
+            />
+            <motion.rect
+              x="1338"
+              y="0"
+              width="311"
+              initial={{ height: 0 }}
+              animate={{ height: 311 }}
+              transition={imageTransition}
+              fill="url(#img-pattern-2)"
+            filter="url(#filter-shadow-2)"
+            exit={{
+              height: 0,
+              transition: {
+                delay: 0
+              }
+            }}
+            />
+            {/* Second dashed border */}
+            <motion.rect
+              x="1338"
+              y="0"
+              width="311"
+              fill="none"
+              stroke="rgb(55, 54, 55)"
+              strokeWidth={4}
+              strokeDasharray="12 12"
+              initial={{ strokeDashoffset: 24, opacity: 0, height: 0 }}
+              animate={{ strokeDashoffset: 0, opacity: 1, height: 311 }}
+              transition={{
+                strokeDashoffset: rotatingDashTransition,
+                opacity: opacityTransition,
+                height: filteredImageTransition
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              transition: {
+                delay: 0
+              }
+            }}
+            />
+          </>
+        }
+      </AnimatePresence>
 
       {/* Straight arrow line */}
       <motion.path

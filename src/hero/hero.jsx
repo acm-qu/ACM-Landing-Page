@@ -1,14 +1,18 @@
-import DesktopSplitter from './assets/splitter'
-import classes from './styles.module.css'
-import { useEffect, useState } from 'react'
-
-import { subtitleTransition, highlightTransition, ctaAndTrustedByTransition } from './transitions'
-
-import { SUBTITLE, TITLE, DESCRIPTION, CTA_1, CTA_2, CTA_1_LINK, CTA_2_LINK, HIGHLIGHTS } from './content'
-
 import { motion } from 'motion/react'
 
+import { useMemo, useEffect, useState } from 'react'
+
+import DesktopSplitter from './assets/splitter'
+import { SUBTITLE, TITLE, DESCRIPTION, CTA_1, CTA_2, CTA_1_LINK, CTA_2_LINK, HIGHLIGHTS } from './content'
+import { subtitleTransition, highlightTransition, ctaAndTrustedByTransition } from './transitions'
+
+import { truncate } from '../util/truncate'
+import { useResponsive } from '../hooks/use-responsive'
+
+import classes from './styles.module.css'
+
 const Hero = () => {
+  // State for the typing animation of the description
   const [typedDescription, setTypedDescription] = useState('')
 
   const descriptionWordCount = DESCRIPTION.split(' ').length
@@ -39,10 +43,15 @@ const Hero = () => {
     }
   }, [])
 
+  // Truncated highlights array
+  const { isDesktop, isMobile, isBigTablet } = useResponsive()
+
+  const displayedHighlights = useMemo(() => (isBigTablet || isDesktop) ? truncate(HIGHLIGHTS, 3) : HIGHLIGHTS, [isBigTablet, isDesktop])
+
   return (
-    <section className={classes.hero}>
+    <section className={`${classes.hero} ${isMobile ? classes.mobile : ''}`}>
       <div className={classes.container}>
-        <div className={classes.text}>
+        <div className={`${classes.text} ${isMobile ? classes.mobile : ''}`}>
           <motion.h2
             className={classes.subtitle}
             initial={{ clipPath: "inset(0 0 100% 0)", y: 28 }}
@@ -51,8 +60,7 @@ const Hero = () => {
           >
             {SUBTITLE}
           </motion.h2>
-          <DesktopSplitter height={450} />
-          <img className={classes.mobileSplitter} src="/hero_heading_splitter.svg" />
+          <DesktopSplitter height={isMobile ? 250 : 450} />
           <motion.h1
             initial={{ clipPath: "inset(0 0 100% 0)", y: -16 }}
             animate={{ clipPath: "inset(0 0 0% 0)", y: 0 }}
@@ -75,7 +83,7 @@ const Hero = () => {
           </motion.p>
         </div>
         <motion.div 
-          className={classes.ctaContainer}
+          className={`${classes.ctaContainer} ${isMobile ? classes.mobile : ''}`}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={ctaAndTrustedByTransition}
@@ -87,7 +95,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={ctaAndTrustedByTransition}
-          className={classes.partners}>
+          className={`${classes.partners} ${isMobile ? classes.mobile : ''}`}>
           <p className={classes.label}>Trusted by</p>
           <div className={classes.images}>
             <img src="/hero_qu_sa.png" height={54} alt="qatar-university-student-affairs" />
@@ -95,7 +103,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-      <div className={classes.highlights}>
+      <div className={`${classes.highlights} ${isMobile ? classes.mobile : ''}`}>
         <motion.p 
           className={classes.label}
           initial={{ clipPath: "inset(100% 0 0 0)", y: 28 }}
@@ -105,7 +113,7 @@ const Hero = () => {
             delay: subtitleTransition.delay + 2
           }}>Highlights</motion.p>
         <div className={classes.container}>
-          {HIGHLIGHTS.map((highlight, i) => (
+          {displayedHighlights.map((highlight, i) => (
             <motion.div
               animate={{ scale: [0, 1, 1] }}
               transition={highlightTransition}

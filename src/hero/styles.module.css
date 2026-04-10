@@ -1,40 +1,57 @@
 .hero {
   margin: 256px auto 0px auto;
+  &.mobile { margin: 156px auto 0px auto;  }
   position: relative;
   width: fit-content;
+  overflow-x: clip;
+  max-width: 90%;
   > .container {
     > .text {
-      > .mobileSplitter {
-        display: none;
-      }
       > .subtitle, > .title {
         overflow: hidden;
         white-space: nowrap;
       }
       > .subtitle {
         margin-bottom: -112px;
+        font-size: 24px;
       }
       > .title {
         position: absolute;
-        top: 44px;
+        top: 52px;
         font-size: 44px;
       }
       > .description {
+        color: var(--gray);
         position: absolute;
-        top: 114px;
+        top: 122px;
+      }
+      &.mobile {
+        > .subtitle {
+          margin-bottom: -62px;
+          font-size: 16px;
+        }
+        > .title {
+          top: 32px;
+          font-size: 24px;
+        }
+        > .description {
+          top: 80px;
+          font-size: 14px;
+        }
       }
     }
     > .ctaContainer {
       display: flex;
       gap: 12px;
       position: absolute;
-      top: 196px;
+      top: 204px;
       > .cta {
         all: unset;
         cursor: pointer;
         font-weight: 600;
         padding: 8px 32px;
         border-radius: 99px;
+        font-size: 16px;
       }
       > .cta.one {
         background-color: var(--gray);
@@ -44,13 +61,24 @@
         background-color: var(--primary);
         color: var(--gray);
       }
+      &.mobile {
+        top: 148px;
+        > .cta {
+          font-size: 12px;
+          text-align: center;
+        }
+        > .cta.two {
+          background-color: var(--primary);
+          color: var(--gray);
+        }
+      }
     }
     > .partners {
       display: flex;
       align-items: center;
       gap: 16px;
       position: absolute;
-      top: 264px;
+      top: 272px;
       > .label {
         color: var(--light-gray);
         font-size: 14px;
@@ -60,9 +88,13 @@
         gap: 8px;
         filter: grayscale(1) opacity(0.8);
       }
+      &.mobile {
+        top: 224px;
+      }
     }
   }
   > .highlights {
+    margin-top: 16px;
     > .label {
       color: var(--light-gray);
       text-transform: uppercase;
@@ -70,10 +102,12 @@
     }
     > .container {
       display: flex;
+      flex-wrap: wrap;
       gap: 32px;
-      width: 75vw;
+      max-width: min(90vw, 1200px);
       > .highlight {
         flex: 1 1 0;
+        min-width: 300px;
         position: relative;
         > .background {
           position: absolute;
@@ -89,6 +123,19 @@
         }
         > .description {
           color: var(--gray);
+          font-size: 16px;
+        }
+      }
+    }
+    &.mobile {
+      margin-top: 112px;
+      > .container > .highlight {
+        > .title {
+          font-size: 20px;
+        }
+        > .description {
+          color: var(--gray);
+          font-size: 14px;
         }
       }
     }

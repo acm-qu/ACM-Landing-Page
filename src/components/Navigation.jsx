@@ -19,7 +19,7 @@ const Navigation = () => {
           <li><a href="#team">Team</a></li>
           <li><a href="#suggestion">Suggest</a></li>
         </ul>
-        <a href="https://quqa.campuslabs.com/engage/organization/acm" target='_blank' className="join desktop">Join Us!</a>
+        <a href="https://www.instagram.com/acm.qu/" target='_blank' className="join desktop">Instagram</a>
         <div onClick={handleToggle} className={'mobile toggle ' + (active ? "active" : "")}></div>
       </nav>
       <div className={'mobile-navigation ' + (active ? "active" : "")}>
@@ -30,7 +30,7 @@ const Navigation = () => {
           <li><a href="#team">Team</a></li>
           <li><a href="#suggestion">Suggest</a></li>
         </ul>
-        <a href="https://quqa.campuslabs.com/engage/organization/acm" target='_blank' className="join">Join Us!</a>
+        <a href="https://www.instagram.com/acm.qu/" target='_blank' className="join">Instagram</a>
       </div>
     </div>
   )

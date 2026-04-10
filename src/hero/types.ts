@@ -1,6 +1,4 @@
-interface IHighlight {
+export interface IHighlight {
   title: string;
   description: string;
 }
-
-export type { IHighlight }

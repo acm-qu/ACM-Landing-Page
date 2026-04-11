@@ -68,7 +68,7 @@
 }
 
 .join:hover {
-  background: var(--secondary);
+  background: var(--primary-dark);
 }
 
 .mobile-navigation {

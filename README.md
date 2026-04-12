@@ -12,6 +12,7 @@ Repository of our landing page, a quick overview of the main benefits and featur
 - Refer to src/app/hero and sec/app/our-projects for the folder organizing convention
 - Do not directly commit, only make PRs
 - Refer to src/app/globals.css for fonts and colors
+- Recommended to follow commit messages convention, but its not that big of a deal u can commit "67" and its fine
 
 ## Contributors  
 

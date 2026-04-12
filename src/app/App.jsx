@@ -2,7 +2,7 @@ import { /* Internship, */ Footer, Suggestion } from "../components"
 import Hero from "./hero/Hero"
 import AboutUs from "./about-us/about-us"
 import Navigation from "./navigation/Navigation"
-import Team from "./team/Team"
+import Team from "./team/team"
 import Events from "./events/Events"
 import './globals.css'
 

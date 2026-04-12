@@ -1,18 +1,12 @@
 import './team.css'
 
-import { PRESIDENTS, HEADS } from './content';
+import { PRESIDENTS, HEADS, PAST_PRESIDENTS, PAST_HEADS } from './content';
 import { TeamMemberCard } from './_components/card';
+import { AnimatePresence, motion } from 'motion/react';
+
+import { useState, useMemo } from 'react';
 
 export default function Team() {
-  const firstRowStyle = {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-    placeItems: 'center',
-    rowGap: '2rem',
-    columnGap: '100px',  // smaller horizontal gap for first row
-    maxWidth: '600px',    // narrower max width so cards are closer
-    margin: '94px auto 4rem',
-  };
 
   const secondRowStyle = {
     display: 'flex',
@@ -21,6 +15,16 @@ export default function Team() {
     gap: '2rem 0px',      // row gap 2rem, column gap 3rem for second row
     margin: '0 auto 3rem',
   };
+
+  const firtRowStyle = {
+    ...secondRowStyle,
+    margin: '94px auto 6rem',
+  }
+
+  const [isPastMembers, setIsPastMembers] = useState(false);
+
+  const presidents = useMemo(() => isPastMembers ? PAST_PRESIDENTS : PRESIDENTS, [isPastMembers]);
+  const heads = useMemo(() => isPastMembers ? PAST_HEADS : HEADS, [isPastMembers]);
 
   return (
     <section
@@ -42,20 +46,37 @@ export default function Team() {
       >
         Team & Departments
       </h2>
+      <button style={{
+        all: "unset",
+        padding: "8px 32px",
+        borderRadius: "9999px",
+        backgroundColor: "var(--primary)",
+        color: "var(--black)",
+        margin: "24px 0",
+        cursor: "pointer",
+      }}
+        onClick={() => setIsPastMembers(prev => !prev)}
+      >
+        {isPastMembers ? "View Current Team" : "View Past Team"}
+      </button>
 
-      {/* First row: 2 members */}
-      <div style={firstRowStyle}>
-        {PRESIDENTS.map((member, i) => (
-          <TeamMemberCard key={i + member.name} {...member} />
-        ))}
-      </div>
+      {/* First row: presidents */}
+      <motion.div layout style={firtRowStyle}>
+        <AnimatePresence mode="wait">
+          {presidents.map((member, i) => (
+            <TeamMemberCard key={member.name + (isPastMembers ? "-past" : "-current")} animKey={member.name + (isPastMembers ? "-past" : "-current")} {...member} />
+          ))}
+        </AnimatePresence>
+      </motion.div>
 
-      {/* Second row: 4 members */}
-      <div style={secondRowStyle}>
-        {HEADS.map((member, i) => (
-          <TeamMemberCard key={i + member.name} {...member} />
-        ))}
-      </div>
+      {/* Second row: heads */}
+      <motion.div layout style={secondRowStyle}>
+        <AnimatePresence mode="wait">
+          {heads.map((member, i) => (
+            <TeamMemberCard key={member.name + (isPastMembers ? "-past" : "-current")} animKey={member.name + (isPastMembers ? "-past" : "-current")} {...member} />
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </section>
   );
 }

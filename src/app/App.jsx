@@ -4,6 +4,7 @@ import AboutUs from "./about-us/about-us"
 import Navigation from "./navigation/Navigation"
 import Team from "./team/Team"
 import Events from "./events/Events"
+import OurProjects from "./our-projects/our-projects"
 import './globals.css'
 
 function App() {
@@ -27,6 +28,8 @@ function App() {
 
         {/* Team - Mariam */}
         <Team />
+        {/* Our Projects - Abdelhakim */}
+        <OurProjects />
         {/* Suggestion - Abdelhakim */}
         <Suggestion />
       </main>

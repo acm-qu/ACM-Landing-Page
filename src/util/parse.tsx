@@ -3,4 +3,4 @@ export const parseAboutUs = (text:string) =>
     .replaceAll("\n", " ")
     .split(" ")
     .filter(char => char !== "\r" && char !== "")
-    .map(word => word.split(":")[0] === "colored" ? <span className="highlight">{word.split(":")[1]}</span> : word)
+    .map((word, index) => word.split(":")[0] === "colored" ? <span key={`highlight-${index}`} className="highlight">{word.split(":")[1]}</span> : word)

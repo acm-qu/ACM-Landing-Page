@@ -44,27 +44,18 @@ export default function Team() {
           lineHeight: 1.2,
         }}
       >
-        Team & Departments
+        Our Team
       </h2>
-      <button style={{
-        all: "unset",
-        padding: "8px 32px",
-        borderRadius: "9999px",
-        backgroundColor: "var(--primary)",
-        color: "var(--black)",
-        margin: "24px 0",
-        cursor: "pointer",
-      }}
-        onClick={() => setIsPastMembers(prev => !prev)}
-      >
-        {isPastMembers ? "View Current Team" : "View Past Team"}
-      </button>
+      
 
       {/* First row: presidents */}
       <motion.div layout style={firtRowStyle}>
         <AnimatePresence mode="wait">
-          {presidents.map((member, i) => (
-            <TeamMemberCard key={member.name + (isPastMembers ? "-past" : "-current")} animKey={member.name + (isPastMembers ? "-past" : "-current")} {...member} />
+          {presidents.map((member) => (
+            <TeamMemberCard 
+              key={member.name + (isPastMembers ? "-past" : "-current")} 
+              animKey={member.name + (isPastMembers ? "-past" : "-current")} 
+              {...member} />
           ))}
         </AnimatePresence>
       </motion.div>
@@ -72,11 +63,29 @@ export default function Team() {
       {/* Second row: heads */}
       <motion.div layout style={secondRowStyle}>
         <AnimatePresence mode="wait">
-          {heads.map((member, i) => (
-            <TeamMemberCard key={member.name + (isPastMembers ? "-past" : "-current")} animKey={member.name + (isPastMembers ? "-past" : "-current")} {...member} />
+          {heads.map((member) => (
+            <TeamMemberCard 
+              key={member.name + (isPastMembers ? "-past" : "-current")} 
+              animKey={member.name + (isPastMembers ? "-past" : "-current")} 
+              {...member} />
           ))}
         </AnimatePresence>
       </motion.div>
+      <a 
+      href="#team"
+      style={{
+        all: "unset",
+        padding: "8px 32px",
+        borderRadius: "9999px",
+        border: "2px solid var(--primary-dark)",
+        color: "var(--primary-dark)",
+        margin: "24px 0",
+        cursor: "pointer",
+      }}
+        onClick={() => setIsPastMembers(prev => !prev)}
+      >
+        {isPastMembers ? "View Current Team" : "View Past Team Leaders"}
+      </a>
     </section>
   );
 }

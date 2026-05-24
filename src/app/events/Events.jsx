@@ -1,7 +1,7 @@
 // @ts-ignore
 import './events.css'
 import { EVENTS } from './content';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 import { imagesTransition } from './transitions';
@@ -22,7 +22,7 @@ export default function Events() {
         </div>
         <h2 className='eventHeading'>Latest Events</h2>
 
-        {EVENTS.map((event, index) => <>
+        {EVENTS.map((event, index) => <Fragment key={`event-${index}`}>
           <div className='date'>{event.date}</div>
           <div className='line'>
             <div className='dot'></div>
@@ -36,10 +36,10 @@ export default function Events() {
             >
               <div className='eventDesc'>{event.description}</div>
               <ul className='eventList'>
-                {event.bullets?.map((bullet) => {
+                {event.bullets?.map((bullet, bulletIndex) => {
                   const [highlight, rest] = bullet.split(/:(.+)/); // split at first colon
                   return (
-                    <li className='eventListItem'>
+                    <li className='eventListItem' key={`event-${index}-bullet-${bulletIndex}`}>
                       <span className="highlight">{highlight}:</span>{rest}
                     </li>
                   )
@@ -47,7 +47,7 @@ export default function Events() {
               </ul>
             </motion.div>
           </div>
-        </>)}
+        </Fragment>)}
         <div></div>
         <div className='line'>
           <div className='diamondTop'></div>
@@ -56,7 +56,7 @@ export default function Events() {
       <div className='eventContainerRight'>
         <div className='eventImageContainer'>
             {EVENTS[selectedEvent].images.map((image, index) => (
-              <AnimatePresence>
+              <AnimatePresence key={`event-${selectedEvent}-image-${index}`}>
                 <motion.img
                   key={`${image}-${index}`}
                   src={image}

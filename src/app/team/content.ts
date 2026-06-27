@@ -21,15 +21,15 @@ export const HEADS: ITeamMember[] = [
 
 export const PAST_PRESIDENTS: Record<string, ITeamMember[]> = {
   "2025": [
-    { name: "Anas Rustom", role: "President - President - President - ", image: '/team/anas.jpg', borderColor: GRADIENTS.president, quote: "i'm the past pres or something idk" },
+    { name: "Anas Rustom", role: "President - President - President - ", image: '/team/anas2.jpeg', borderColor: GRADIENTS.president, quote: "Alhamdulillah, it was a memorable experience, but I wish the ACs in our meetings had Vora.qa" },
     { name: "Noor Soueid", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the pres or something idk" },
   ],
   "2024": [
-    { name: "Muhammad Khan", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the past pres or something idk" },
-    { name: "Anas Rustom", role: "Vice President - Vice President - ", image: '/team/anas.jpg', borderColor: GRADIENTS.president, quote: "i'm the past pres or something idk" },
-    { name: "Sara Metwaly", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the past vp or something idk" },
-    { name: "Dania Al-Batany", role: "Secretary - Secretary - Secretary - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the past secretary or something idk" },
-    { name: "Mohamed Ali", role: "Treasurer - Treasurer - Treasurer - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the past treasurer or something idk" },
+    { name: "Muhammad Khan", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
+    { name: "Anas Rustom", role: "Vice President - Vice President - ", image: '/team/anas.jpg', borderColor: GRADIENTS.president },
+    { name: "Sara Metwaly", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
+    { name: "Dania Al-Batany", role: "Secretary - Secretary - Secretary - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
+    { name: "Mohamed Ali", role: "Treasurer - Treasurer - Treasurer - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
   ]
 }
 
@@ -44,8 +44,8 @@ export const PAST_HEADS: Record<string, ITeamMember[]> = {
   ],
 
   "2024": [
-    { name: "Faseeh Nawaz", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative, quote: "i'm the past head of creative or something idk" },
-    { name: "Abdullah Mahran", role: "Lead of the Events Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.events, quote: "i'm the past head of technical or something idk" },
-    { name: "Hunzalah Hassan", role: "Lead of the Technical Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.technical, quote: "i'm the past head of technical or something idk" },
+    { name: "Faseeh Nawaz", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative },
+    { name: "Abdullah Mahran", role: "Lead of the Events Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.events },
+    { name: "Hunzalah Hassan", role: "Lead of the Technical Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.technical },
   ]
 }

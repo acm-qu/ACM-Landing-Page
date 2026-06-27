@@ -122,20 +122,22 @@ export function TeamMemberCard({ name, role, image, borderColor, quote, animKey 
         >
           {role.split(" - ")[0]}
         </p>
-        <blockquote
-          style={{
-            fontSize: '14px',
-            fontWeight: 400,
-            fontFamily: 'Poppins, sans-serif',
-            letterSpacing: '1px',
-            textAlign: 'center',
-            color: "var(--light-gray)",
-            marginTop: '8px',
-            fontStyle: 'italic',
-          }}
-        >
-          &ldquo;{quote}&rdquo;
-        </blockquote>
+        {quote && 
+          <blockquote
+            style={{
+              fontSize: '14px',
+              fontWeight: 400,
+              fontFamily: 'Poppins, sans-serif',
+              letterSpacing: '1px',
+              textAlign: 'center',
+              color: "var(--light-gray)",
+              marginTop: '8px',
+              fontStyle: 'italic',
+            }}
+          >
+            &ldquo;{quote}&rdquo;
+          </blockquote>
+        }
       </motion.div>
   );
 }

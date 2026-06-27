@@ -3,7 +3,7 @@ export interface ITeamMember {
   readonly role: string;
   readonly image: string;
   readonly borderColor: string;
-  readonly quote: string;
+  readonly quote?: string;
 };
 
 export interface ITeamMemberCardProps extends ITeamMember {

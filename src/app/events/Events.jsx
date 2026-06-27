@@ -8,7 +8,7 @@ import { imagesTransition } from './transitions';
 
 export default function Events() {
 
-  const [selectedEvent, setSelectedEvent] = useState(0);
+  const [selectedEvent, setSelectedEvent] = useState(1);
   const handleSelectEvent = (index) => setSelectedEvent(index);
 
   const classNames= ['pointingPic', 'teachingPic', 'discussionPic'];
@@ -55,23 +55,58 @@ export default function Events() {
       </div>
       <div className='eventContainerRight'>
         <div className='eventImageContainer'>
-            {EVENTS[selectedEvent].images.map((image, index) => (
-              <AnimatePresence key={`event-${selectedEvent}-image-${index}`}>
+          <AnimatePresence mode='wait'>
+            <motion.div key={selectedEvent} className='eventImageGroup'>
+              {/* In case you are about to puke at this code for not using loops */}
+              {/* For some reason the exit animations dont work when I use images.map(=> ...) */}
+              {/* And a safe way to guarantee the exit animation working is to have: { Boolean && Component } which is what I did repeatedly */}
+              {EVENTS[selectedEvent].images?.[0] && (
                 <motion.img
-                  key={`${image}-${index}`}
-                  src={image}
-                  alt={EVENTS[selectedEvent].alts[index]}
+                  key={EVENTS[selectedEvent].alts[0]}
+                  src={EVENTS[selectedEvent].images[0]}
+                  alt={EVENTS[selectedEvent].alts[0]}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{
                     ...imagesTransition,
-                    delay: 0.2 * index
+                    delay: 0.2 * 0
                   }}
-                  className={classNames[index]}
+                  className={classNames[0]}
                 />
-              </AnimatePresence>
-            ))}
+              )}
+              {EVENTS[selectedEvent].images?.[1] && (
+                <motion.img
+                  key={EVENTS[selectedEvent].alts[1]}
+                  src={EVENTS[selectedEvent].images[1]}
+                  alt={EVENTS[selectedEvent].alts[1]}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{
+                    ...imagesTransition,
+                    delay: 0.2 * 1
+                  }}
+                  className={classNames[1]}
+                />
+              )}
+              {EVENTS[selectedEvent].images?.[2] && (
+                <motion.img
+                  key={EVENTS[selectedEvent].alts[2]}
+                  src={EVENTS[selectedEvent].images[2]}
+                  alt={EVENTS[selectedEvent].alts[2]}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{
+                    ...imagesTransition,
+                    delay: 0.2 * 2
+                  }}
+                  className={classNames[2]}
+                />
+              )}
+            </motion.div>
+          </AnimatePresence>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import '../styles/suggestion.css'
+import './suggestion.css'
 
 const Suggestion = () => {
   return (

@@ -115,9 +115,10 @@ const Hero = () => {
         <div className={classes.container}>
           {displayedHighlights.map((highlight, i) => (
             <motion.div
+              key={highlight.title}
               animate={{ scale: [0, 1, 1] }}
               transition={highlightTransition}
-              className={classes.highlight} key={highlight.title}>
+              className={classes.highlight}>
               <motion.div
                 animate={{ height: ["100%", "100%", "0%"] }}
                 transition={{ ...highlightTransition, delay: highlightTransition.delay + i * 0.3 }}

@@ -1,10 +1,12 @@
-import { /* Internship, */ Footer, Suggestion } from "../components"
 import Hero from "./hero/Hero"
 import AboutUs from "./about-us/about-us"
 import Navigation from "./navigation/Navigation"
-import Team from "./team/Team"
+import Team from "./team/team"
 import Events from "./events/Events"
 import OurProjects from "./our-projects/our-projects"
+import Suggestion from "./suggestion/Suggestion"
+import Footer from "./footer/Footer"
+import CurrentEvent from "./current-event/current-event"
 import './globals.css'
 
 function App() {
@@ -22,9 +24,8 @@ function App() {
         <AboutUs />
         {/* Events - Subzi */}
         <Events />
-        {/* Internship - Mariam */}
-
-        {/* <Internship /> - Disabled until we actually have the program */}
+        {/* Current Event - Mariam */}
+        <CurrentEvent />
 
         {/* Team - Mariam */}
         <Team />

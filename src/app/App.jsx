@@ -1,10 +1,10 @@
-import Hero from "./hero/Hero"
+import Hero from "./hero/hero"
 import AboutUs from "./about-us/about-us"
-import Navigation from "./navigation/Navigation"
+import Navigation from "./navigation/navigation"
 import Team from "./team/team"
-import Events from "./events/Events"
-import Suggestion from "./suggestion/Suggestion"
-import Footer from "./footer/Footer"
+import Events from "./events/events"
+import Suggestion from "./suggestion/suggestion"
+import Footer from "./footer/footer"
 import CurrentEvent from "./current-event/current-event"
 import './globals.css'
 

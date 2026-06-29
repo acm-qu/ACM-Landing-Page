@@ -1,4 +1,4 @@
-import type { ITeamMember } from "./types"
+import type { ITeamMember, Year } from "./types"
 
 const GRADIENTS = {
   "president": "var(--primary)",
@@ -19,9 +19,9 @@ export const HEADS: ITeamMember[] = [
   { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "67" },
 ]
 
-export const PAST_PRESIDENTS: Record<string, ITeamMember[]> = {
+export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basically a dictionary/object/hashmap type
   "2025": [
-    { name: "Anas Rustom", role: "President - President - President - ", image: '/team/anas2.jpeg', borderColor: GRADIENTS.president, quote: "Alhamdulillah, it was a memorable experience, but I wish the ACs in our meetings had Vora.qa" },
+    { name: "Anas Rustom", role: "President - President - President - ", image: '/team/anas2.jpg', borderColor: GRADIENTS.president, quote: "Alhamdulillah, it was a memorable experience, but I wish the ACs in our meetings had Vora.qa" },
     { name: "Noor Soueid", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the pres or something idk" },
   ],
   "2024": [
@@ -34,7 +34,7 @@ export const PAST_PRESIDENTS: Record<string, ITeamMember[]> = {
 }
 
 
-export const PAST_HEADS: Record<string, ITeamMember[]> = {
+export const PAST_HEADS: Record<Year, ITeamMember[]> = {
   "2025": [
     { name: "Sifna Nasar", role: "Lead of the Public Relations Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.operations, quote: "i'm the past head of pr or something idk" },
     { name: "Amna Bushra", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative, quote: "i'm the past head of creative or something idk" },

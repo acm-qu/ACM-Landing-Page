@@ -9,3 +9,5 @@ export interface ITeamMember {
 export interface ITeamMemberCardProps extends ITeamMember {
   animKey: string;
 }
+
+export type Year = `${number}`

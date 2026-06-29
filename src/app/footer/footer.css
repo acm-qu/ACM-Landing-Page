@@ -2,7 +2,7 @@
     background: var(--black);
     color: var(--white);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     padding: 3rem 2rem;
     font-family: var(--paragraph);
@@ -17,6 +17,7 @@
 
 .cols {
     display: flex;
+    flex-wrap: wrap;
     gap: 4rem;
     justify-content: flex-start;
 }
@@ -65,7 +66,6 @@
     }
 
     .cols {
-        flex-direction: column;
         gap: 2rem;
     }
 

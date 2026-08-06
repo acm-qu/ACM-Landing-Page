@@ -15,8 +15,8 @@ export const PRESIDENTS: ITeamMember[] = [
 
 export const HEADS: ITeamMember[] = [
   { name: "Lana Alkasiy", role: "Lead of the Operations Team - ", image: '/team/lana.jpg', borderColor: GRADIENTS.operations, quote: "404: quote not found" },
-  { name: "Mohamed", role: "Lead of the Event Planning Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.events, quote: "i'm the head of event planning or something idk" },
   { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "67" },
+  { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events, quote: "67" },
 ]
 
 export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basically a dictionary/object/hashmap type

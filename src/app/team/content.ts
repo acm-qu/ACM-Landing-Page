@@ -9,20 +9,20 @@ const GRADIENTS = {
 }
 
 export const PRESIDENTS: ITeamMember[] = [
-  { name: "Noor Soueid", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the pres or something idk" },
-  { name: "Dana Hommos", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the vp or something idk" },
+  { name: "Noor Soueid", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
+  { name: "Dana Hommos", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
 ];
 
 export const HEADS: ITeamMember[] = [
   { name: "Lana Alkasiy", role: "Lead of the Operations Team - ", image: '/team/lana.jpg', borderColor: GRADIENTS.operations, quote: "404: quote not found" },
   { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "67" },
-  { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events, quote: "67" },
+  { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events },
 ]
 
 export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basically a dictionary/object/hashmap type
   "2025": [
     { name: "Anas Rustom", role: "President - President - President - ", image: '/team/anas2.jpg', borderColor: GRADIENTS.president, quote: "Alhamdulillah, it was a memorable experience, but I wish the ACs in our meetings had Vora.qa" },
-    { name: "Noor Soueid", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "i'm the pres or something idk" },
+    { name: "Noor Soueid", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
   ],
   "2024": [
     { name: "Muhammad Khan", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
@@ -36,11 +36,11 @@ export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basic
 
 export const PAST_HEADS: Record<Year, ITeamMember[]> = {
   "2025": [
-    { name: "Sifna Nasar", role: "Lead of the Public Relations Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.operations, quote: "i'm the past head of pr or something idk" },
-    { name: "Amna Bushra", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative, quote: "i'm the past head of creative or something idk" },
-    { name: "Sham Alkhais", role: "Lead of the Event Planning Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.events, quote: "i'm the past head of event planning or something idk" },
-    { name: "Moaz Jemmieh", role: "Lead of the Event Planning Team - ", image: '/team/moaz.jpg', borderColor: GRADIENTS.events, quote: "i'm the past head of event planning or something idk" },
-    { name: "Mohamed Al-Ansary", role: "Lead of the Technical Team - ", image: '/team/mohamed.jpg', borderColor: GRADIENTS.technical, quote: "i'm the past head of technical or something idk" },
+    { name: "Sifna Nasar", role: "Lead of the Public Relations Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.operations},
+    { name: "Amna Bushra", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative},
+    { name: "Sham Alkhais", role: "Lead of the Event Planning Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.events},
+    { name: "Moaz Jemmieh", role: "Lead of the Event Planning Team - ", image: '/team/moaz.jpg', borderColor: GRADIENTS.events},
+    { name: "Mohamed Al-Ansary", role: "Lead of the Technical Team - ", image: '/team/mohamed.jpg', borderColor: GRADIENTS.technical},
   ],
 
   "2024": [

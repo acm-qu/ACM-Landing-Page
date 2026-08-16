@@ -1,0 +1,18 @@
+# SPA fallback for Apache/cPanel: serve index.html for client-side routes
+# like /projects/better-schedule. Only real files win the rewrite - real
+# directories (e.g. /projects, which also exists as an asset folder) still
+# route to the app instead of Apache's trailing-slash redirect.
+<IfModule mod_dir.c>
+  # Without this, /projects 301-redirects to /projects/ before the rewrite runs
+  DirectorySlash Off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  # Redirect at the server so the browser never has to load the app first
+  RewriteRule ^projects/csewiki/?$ https://csewiki.netlify.app [R=302,L]
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule . /index.html [L]
+</IfModule>

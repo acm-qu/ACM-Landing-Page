@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { Navigate, Route, Routes } from 'react-router'
+import { Navigate, Route, Routes, Link } from 'react-router'
 import SiteLayout from './layout'
 import Home from './home'
 import Projects from './projects/projects'
@@ -8,6 +8,12 @@ import './globals.css'
 
 // Lazy so the wizard's code and fonts only load when the route is visited
 const BetterSchedule = lazy(() => import('./better-schedule/better-schedule'))
+
+// Navigate only handles in-app paths, so external URLs need a real redirect
+function ExternalRedirect({ to }) {
+  window.location.replace(to)
+  return null
+}
 
 function App() {
 
@@ -22,6 +28,7 @@ function App() {
           </Route>
           {/* Standalone: ships its own chrome per the design handoff */}
           <Route path="projects/better-schedule" element={<BetterSchedule />} />
+          <Route path="projects/csewiki" element={<ExternalRedirect to="https://csewiki.netlify.app" />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

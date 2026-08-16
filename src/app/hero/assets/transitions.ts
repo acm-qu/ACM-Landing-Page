@@ -1,6 +1,6 @@
 import { cubicBezier } from "motion";
 
-const DELAY = 1
+export const DELAY = 0.5
 
 const lineTransition = {
   duration: DELAY,
@@ -14,7 +14,7 @@ const markerTransition = {
 }
 
 const curvesTransition = {
-  duration: 1.5,
+  duration: 1,
   ease: cubicBezier(0, .99, .07, 1),
   delay: DELAY
 }

@@ -54,7 +54,7 @@
 
 .join {
   background: var(--primary);
-  color: var(--white);
+  color: var(--gray);
   padding: 8px 32px;
   font-size: 1rem;
   font-weight: 600;
@@ -63,7 +63,8 @@
 }
 
 .join:hover {
-  background: var(--primary-dark);
+  background: var(--gray);
+  color: var(--primary);
 }
 
 .mobile-navigation {

@@ -1,18 +1,16 @@
+import { Link } from 'react-router'
 import './footer.css'
 
 const Footer = () => {
   return (
     <footer className="site-footer">
-      <img src="footer-logo.png" alt="ACM Qatar University" className="footer-logo" />
+      <img src="/footer-logo.png" alt="ACM Qatar University" className="footer-logo" />
 
       <nav className="cols">
         <div className="col">
           <h4>Navigation</h4>
           <ul>
-            <li><a href="#mission">Mission</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#internship">Internship</a></li>
-            <li><a href="#team">Team & Departments</a></li>
+            <li><Link to="/projects">Projects</Link></li>
           </ul>
         </div>
 

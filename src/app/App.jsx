@@ -1,40 +1,30 @@
-import Hero from "./hero/hero"
-import AboutUs from "./about-us/about-us"
-import Navigation from "./navigation/navigation"
-import Team from "./team/team"
-import Events from "./events/events"
-import Suggestion from "./suggestion/suggestion"
-import Footer from "./footer/footer"
-import CurrentEvent from "./current-event/current-event"
+import { lazy, Suspense } from 'react'
+import { Navigate, Route, Routes } from 'react-router'
+import SiteLayout from './layout'
+import Home from './home'
+import Projects from './projects/projects'
+import ScrollManager from './scroll-manager'
 import './globals.css'
+
+// Lazy so the wizard's code and fonts only load when the route is visited
+const BetterSchedule = lazy(() => import('./better-schedule/better-schedule'))
 
 function App() {
 
   return (
     <>
-      <header>
-        {/* Navigation - M. Al-Ansary */}
-        <Navigation />
-        {/* Hero section - Abdelhakim */}
-        <Hero />
-      </header>
-      <main>
-        {/* About Us - M. Al-Ansary */}
-        <AboutUs />
-        {/* Events - Subzi */}
-        <Events />
-        {/* Current Event - Mariam */}
-        <CurrentEvent />
-
-        {/* Team - Mariam */}
-        <Team />
-        {/* Suggestion - Abdelhakim */}
-        <Suggestion />
-      </main>
-      <footer>
-        {/* Footer - M. Al-Ansary */}
-        <Footer />
-      </footer>
+      <ScrollManager />
+      <Suspense fallback={null}>
+        <Routes>
+          <Route element={<SiteLayout />}>
+            <Route index element={<Home />} />
+            <Route path="projects" element={<Projects />} />
+          </Route>
+          {/* Standalone: ships its own chrome per the design handoff */}
+          <Route path="projects/better-schedule" element={<BetterSchedule />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </Suspense>
     </>
   )
 }

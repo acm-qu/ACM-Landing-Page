@@ -1,5 +1,6 @@
 // Navigation.jsx
 import { useState } from 'react'
+import { Link } from 'react-router'
 import { LINKS } from './content'
 import './navigation.css'
 
@@ -12,11 +13,11 @@ const Navigation = () => {
   return (
     <div className="nav-container">
       <nav className="navigation">
-        <a href="#hero" className="navigation-logo">{"<ACM.QU />"}</a>
+        <Link to="/" className="navigation-logo">{"<ACM.QU />"}</Link>
         <ul className="navigation-links desktop">
           {LINKS.map(link => (
             <li key={link.name}>
-              <a href={link.href}>{link.name}</a>
+              <Link to={link.href}>{link.name}</Link>
             </li>
           ))}
         </ul>
@@ -28,7 +29,7 @@ const Navigation = () => {
         <ul className="navigation-links">
           {LINKS.map(link => (
             <li key={link.name}>
-              <a href={link.href} onClick={handleToggle}>{link.name}</a>
+              <Link to={link.href} onClick={handleToggle}>{link.name}</Link>
             </li>
           ))}
         </ul>
@@ -41,4 +42,3 @@ const Navigation = () => {
 
 
 export default Navigation
-

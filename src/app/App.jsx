@@ -28,7 +28,7 @@ function App() {
           </Route>
           {/* Standalone: ships its own chrome per the design handoff */}
           <Route path="projects/better-schedule" element={<BetterSchedule />} />
-          <Route path="projects/csewiki" element={<ExternalRedirect to="https://csewiki.netlify.app" />} />
+          <Route path="projects/csewiki" element={<ExternalRedirect to="https://csewiki.qu.acm.org" />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

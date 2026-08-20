@@ -12,12 +12,12 @@ const StepPaste = ({ theme, step, allowed, tab, text, showNote, onGo, onPickTab,
     alignItems: "center", justifyContent: "center", padding: "150px 24px 72px",
     animation: "bs-slide-in 0.5s cubic-bezier(0,.8,.2,1) both"
   }}>
-    <Stepper step={step} allowed={allowed} onGo={onGo} theme={theme} animate />
+    <Stepper step={step} allowed={allowed} onGo={onGo} animate />
     <h1 className={classes.title} style={{ color: theme.ink }}>Paste your schedule</h1>
     <p style={{ color: "var(--body)", fontSize: 16, lineHeight: 1.6, margin: "0 0 26px", textAlign: "center", maxWidth: 600, textWrap: "pretty", ...rise(0.55) }}>
       {tab === "banner"
-        ? "On myBanner, open Registration, then View Registration Information — select everything on the page and copy it."
-        : "Open your weekly schedule on myQU, select all of the schedule text, and copy it."}
+        ? "On myBanner, open Registration, Register Classes, Select a semester, and copy the Schedule details."
+        : "Open myQU, then select all of the schedule text, and copy it."}
       {" "}Watch <a href={TUTORIAL_LINK} target="_blank" rel="noreferrer">the tutorial</a> if it is your first time.
     </p>
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, ...rise(0.8) }}>

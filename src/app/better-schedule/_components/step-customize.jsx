@@ -11,7 +11,7 @@ const Eyebrow = ({ children }) => (
 const CheckRow = ({ label, checked, onToggle, first = false }) => (
   <label className={classes.checkRow} style={first ? { marginTop: 8 } : undefined}>
     {label}
-    <input type="checkbox" checked={checked} onChange={onToggle} />
+    <input type="checkbox" className={classes.check} checked={checked} onChange={onToggle} />
   </label>
 )
 
@@ -32,7 +32,7 @@ const StepCustomize = ({ theme, step, allowed, accent, ramadan, fmt24, showBreak
     alignItems: "center", padding: "150px 24px 72px",
     animation: "bs-slide-in 0.5s cubic-bezier(0,.8,.2,1) both"
   }}>
-    <Stepper step={step} allowed={allowed} onGo={onGo} theme={theme} />
+    <Stepper step={step} allowed={allowed} onGo={onGo} />
     <h1 className={classes.title} style={{ color: theme.ink }}>Make it yours</h1>
     <p style={{ color: "var(--body)", fontSize: 16, lineHeight: 1.6, margin: 0, textAlign: "center", maxWidth: 560, textWrap: "pretty" }}>
       Everything here updates the preview in the next step. You can also click any class there to recolor it.

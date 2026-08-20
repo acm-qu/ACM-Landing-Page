@@ -5,9 +5,13 @@ import classes from '../styles.module.css'
 import Diamond from './diamond'
 import { LabIcon, LectureIcon } from './icons'
 
+// Truncated text keeps every field on one line and ellipsizes what overflows,
+// matching how the JPEG canvas draws it. minWidth lets flex rows shrink first.
+const CLIP = { maxWidth: "100%", minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }
+
 // The exported sheet: A4-width surface with the weekly grid, class blocks,
 // dashed break blocks and the click-to-recolor popover.
-const Sheet = ({ geo, theme, accent, palette, custom, onRecolor, fontSel }) => {
+const Sheet = ({ geo, theme, accent, palette, custom, onRecolor, fontSel, truncate }) => {
   const [picker, setPicker] = useState(null)
   const [hexDraft, setHexDraft] = useState("")
 
@@ -58,29 +62,30 @@ const Sheet = ({ geo, theme, accent, palette, custom, onRecolor, fontSel }) => {
             position: "absolute", left: k.x, top: k.y, width: k.w, height: k.h,
             border: `2px dashed ${accent}`, boxSizing: "border-box",
             display: "flex", alignItems: "center", justifyContent: "center", gap: 7,
-            color: theme.sheetMuted, fontSize: 10.5, fontFamily: "var(--paragraph)", overflow: "hidden"
+            color: theme.sheetMuted, fontSize: 10.5, fontFamily: "var(--paragraph)",
+            overflow: truncate ? "hidden" : "visible"
           }}>
             <Diamond size={5} color={accent} />
-            {k.label}
+            <span style={truncate ? CLIP : undefined}>{k.label}</span>
           </div>
         ))}
         {geo.blocks.map((b, i) => (
-          <div key={i} onClick={() => openPicker(b)} style={{
+          <div key={i} onClick={() => openPicker(b)} data-tour={i === 0 ? "class" : undefined} style={{
             position: "absolute", left: b.x, top: b.y, width: b.w, height: b.h,
             background: b.bg, color: b.ink,
             display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
             textAlign: "center", cursor: "pointer", padding: "3px 7px", boxSizing: "border-box",
-            overflow: "hidden", fontFamily: fontSel.bodyFontCss
+            overflow: truncate ? "hidden" : "visible", fontFamily: fontSel.bodyFontCss
           }}>
             {/* Fonts set on the text elements themselves: the `*` reset in
                 index.css matches them directly, which beats inheritance */}
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 5, fontWeight: fontSel.boldW, fontSize: 11.5, lineHeight: 1.3, fontFamily: fontSel.titleFontCss }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 5, fontWeight: fontSel.boldW, fontSize: 11.5, lineHeight: 1.3, fontFamily: fontSel.titleFontCss, maxWidth: "100%" }}>
               {b.showLab && <LabIcon />}
               {b.showLec && <LectureIcon />}
-              <span style={{ fontFamily: "inherit" }}>{b.title}</span>
+              <span style={{ fontFamily: "inherit", ...(truncate ? CLIP : null) }}>{b.title}</span>
             </div>
-            {b.line2 && <div style={{ fontSize: 10.5, opacity: 0.92, marginTop: 2, fontFamily: fontSel.bodyFontCss }}>{b.line2}</div>}
-            {b.line3 && <div style={{ fontSize: 10.5, opacity: 0.92, fontFamily: fontSel.bodyFontCss }}>{b.line3}</div>}
+            {b.line2 && <div style={{ fontSize: 10.5, opacity: 0.92, marginTop: 2, fontFamily: fontSel.bodyFontCss, ...(truncate ? CLIP : null) }}>{b.line2}</div>}
+            {b.line3 && <div style={{ fontSize: 10.5, opacity: 0.92, fontFamily: fontSel.bodyFontCss, ...(truncate ? CLIP : null) }}>{b.line3}</div>}
           </div>
         ))}
         {picker && (

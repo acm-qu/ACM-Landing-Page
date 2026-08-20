@@ -8,8 +8,13 @@ import { applyRamadan, getBannerCourseData, getCourseData } from './parser'
 import StepCustomize from './_components/step-customize'
 import StepPaste from './_components/step-paste'
 import StepPreview from './_components/step-preview'
+import Tutorial from './_components/tutorial'
 import { MoonIcon, SunIcon } from './_components/icons'
 import classes from './styles.module.css'
+
+// Storage can throw in private browsing, so a failed read just replays the tour
+const TOUR_KEY = "bs-tutorial-seen"
+const tourSeen = () => { try { return !!localStorage.getItem(TOUR_KEY) } catch { return false } }
 
 // Better.Schedule — 3-step schedule generator (Paste → Customize → Export).
 // Standalone page with its own chrome, per the design handoff.
@@ -22,6 +27,8 @@ const BetterSchedule = () => {
   const [fmt24, setFmt24] = useState(false)
   const [pph, setPph] = useState(66)
   const [showBreaks, setShowBreaks] = useState(true)
+  const [truncate, setTruncate] = useState(false)
+  const [tour, setTour] = useState(false)
   const [fields, setFields] = useState({ code: false, name: true, timing: true, bcode: true, bname: false, room: true, icon: true })
   const [college, setCollege] = useState("ACM QU")
   const [font, setFont] = useState("ACM")
@@ -59,6 +66,20 @@ const BetterSchedule = () => {
   const geo = step === 3 && sched && count > 0
     ? buildSheetGeometry({ sched, text, pph, fmt24, fields, palette: preset.colors, custom, showBreaks, breakMinGap: BREAK_MIN_GAP })
     : null
+
+  // The tour runs itself the first time a schedule is previewed. It waits out
+  // the slide-in transform, which would otherwise skew the spotlight rects.
+  const hasGeo = !!geo
+  useEffect(() => {
+    if (step !== 3 || !hasGeo || tourSeen()) return
+    const t = setTimeout(() => setTour(true), 700)
+    return () => clearTimeout(t)
+  }, [step, hasGeo])
+
+  const closeTour = () => {
+    setTour(false)
+    try { localStorage.setItem(TOUR_KEY, "1") } catch { /* private browsing */ }
+  }
 
   const fontSel = {
     titleFontCss: font === "Code" ? "'JetBrains Mono', monospace" : font === "University" ? "'Helvetica Neue', sans-serif" : "'Lexend', sans-serif",
@@ -144,13 +165,17 @@ const BetterSchedule = () => {
           pph={pph}
           custom={custom}
           fontSel={fontSel}
+          truncate={truncate}
           tabLabel={tab === "banner" ? "myBanner" : "myQU"}
           onPph={setPph}
+          onTruncate={() => setTruncate(t => !t)}
+          onTutorial={() => setTour(true)}
           onRecolor={(key, color) => setCustom(c => ({ ...c, [key]: color }))}
           onExportPdf={() => window.print()}
-          onExportJpeg={() => { if (geo) exportSheetAsJpeg({ geo, theme, accent: preset.accent, font }) }}
+          onExportJpeg={() => { if (geo) exportSheetAsJpeg({ geo, theme, accent: preset.accent, font, truncate }) }}
         />
       )}
+      {tour && geo && <Tutorial onClose={closeTour} />}
     </div>
   )
 }

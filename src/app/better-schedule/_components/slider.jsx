@@ -1,9 +1,13 @@
-const MIN = 44, MAX = 110, RANGE = MAX - MIN, TRACK_W = 220
+import classes from '../styles.module.css'
 
-// Custom px-per-hour slider: teal fill, tick marks every 55px and a rotated
-// square thumb. Pointer down or drag anywhere on the track sets the value.
-const HeightSlider = ({ value, onChange, hair }) => {
-  const fillW = Math.round(((value - MIN) / RANGE) * TRACK_W)
+const MIN = 44, MAX = 110, RANGE = MAX - MIN, TICKS = 4
+
+// Custom px-per-hour slider: teal fill, four evenly spaced tick marks and a
+// rotated square thumb. Pointer down or drag anywhere on the track sets the
+// value. Everything inside is positioned as a percentage of the track, so the
+// narrower mobile track in styles.module.css needs no extra maths here.
+const HeightSlider = ({ value, onChange }) => {
+  const pct = ((value - MIN) / RANGE) * 100
 
   const handleDown = e => {
     e.preventDefault()
@@ -20,20 +24,20 @@ const HeightSlider = ({ value, onChange, hair }) => {
   }
 
   return (
-    <div onPointerDown={handleDown} style={{ position: "relative", width: TRACK_W, height: 28, cursor: "pointer", touchAction: "none", flexShrink: 0 }}>
-      <div style={{ position: "absolute", left: 0, right: 0, top: 13, height: 2, background: hair }} />
-      <div style={{ position: "absolute", left: 0, top: 13, height: 2, width: fillW, background: "#3ae4d1" }} />
-      {[0, 1, 2, 3, 4].map(i => (
-        <div key={i} style={{
-          position: "absolute", top: 19, left: Math.min(TRACK_W - 1, i * 55), width: 1, height: 6,
-          background: (i * 55) <= fillW ? "#42a7ae" : hair
-        }} />
-      ))}
-      <div style={{
-        position: "absolute", top: 7, left: Math.max(0, Math.min(TRACK_W - 14, fillW - 7)),
-        width: 14, height: 14, background: "#3ae4d1", border: "2px solid #42a7ae",
-        transform: "rotate(45deg)", boxSizing: "border-box", pointerEvents: "none"
-      }} />
+    <div onPointerDown={handleDown} className={classes.slider}>
+      <div className={classes.sliderTrack} />
+      <div className={classes.sliderFill} style={{ width: `${pct}%` }} />
+      {[0, 1, 2, 3, 4].map(i => {
+        const at = (i / TICKS) * 100
+        return (
+          <div
+            key={i}
+            className={`${classes.sliderTick} ${at <= pct ? classes.sliderTickOn : ''}`}
+            style={{ left: i === TICKS ? "calc(100% - 1px)" : `${at}%` }}
+          />
+        )
+      })}
+      <div className={classes.sliderThumb} style={{ left: `clamp(0px, calc(${pct}% - 7px), calc(100% - 14px))` }} />
     </div>
   )
 }

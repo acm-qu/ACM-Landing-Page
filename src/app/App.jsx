@@ -27,7 +27,7 @@ function App() {
             <Route path="projects" element={<Projects />} />
           </Route>
           {/* Standalone: ships its own chrome per the design handoff */}
-          <Route path="projects/better-schedule" element={<BetterSchedule />} />
+          <Route path="projects/better-schedule" element={<ExternalRedirect to="https://better-schedule.qu.acm.org" />} />
           <Route path="projects/csewiki" element={<ExternalRedirect to="https://csewiki.qu.acm.org" />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

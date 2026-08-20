@@ -15,7 +15,7 @@ export const PROJECTS:IProject[] = [
     name: "Better.Schedule",
     description: "Paste your schedule text from myQU or myBanner and get a clean weekly timetable. Customize it, then export it as a PDF or JPEG.",
     image: "/projects/better-schedule.png",
-    link: "/projects/better-schedule",
-    repo: "https://github.com/acm-qu/ACM-Landing-Page/tree/dev/src/app/better-schedule"
+    link: "https://better-schedule.qu.acm.org",
+    repo: "https://github.com/acm-qu/better-schedule"
   }
 ]

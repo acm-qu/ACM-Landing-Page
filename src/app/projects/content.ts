@@ -8,7 +8,7 @@ export const PROJECTS:IProject[] = [
     name: "CSEWiki",
     description: "A community wiki for Computer Science and Engineering students at Qatar University. Course guides, study resources, and advice, all in one place.",
     image: "/projects/csewiki.png",
-    link: "https://csewiki.netlify.app",
+    link: "https://csewiki.qu.acm.org",
     repo: "https://github.com/acm-qu/Enhanced-CSE"
   },
   {

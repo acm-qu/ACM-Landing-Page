@@ -6,9 +6,6 @@ import Projects from './projects/projects'
 import ScrollManager from './scroll-manager'
 import './globals.css'
 
-// Lazy so the wizard's code and fonts only load when the route is visited
-const BetterSchedule = lazy(() => import('./better-schedule/better-schedule'))
-
 // Navigate only handles in-app paths, so external URLs need a real redirect
 function ExternalRedirect({ to }) {
   window.location.replace(to)

@@ -11,7 +11,6 @@
   RewriteEngine On
   RewriteBase /
   # Redirect at the server so the browser never has to load the app first
-  RewriteRule ^projects/csewiki/?$ https://csewiki.netlify.app [R=302,L]
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteRule . /index.html [L]

@@ -9,14 +9,15 @@ const GRADIENTS = {
 }
 
 export const PRESIDENTS: ITeamMember[] = [
+  { name: "Lana Alkasiy", role: "Secretary - Secretary - Secretary - ", image: '/team/lana.jpg', borderColor: GRADIENTS.president, quote: "404: quote not found" },
   { name: "Noor Soueid", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
   { name: "Dana Hommos", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
-];
+]
 
 export const HEADS: ITeamMember[] = [
-  { name: "Lana Alkasiy", role: "Lead of the Operations Team - ", image: '/team/lana.jpg', borderColor: GRADIENTS.operations, quote: "404: quote not found" },
-  { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "67" },
   { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events },
+  { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "Development only happens after letting go of part of who you are." },
+  // { name: "Jawaher", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative },
 ]
 
 export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basically a dictionary/object/hashmap type
@@ -25,8 +26,8 @@ export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basic
     { name: "Noor Soueid", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
   ],
   "2024": [
-    { name: "Muhammad Khan", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
     { name: "Anas Rustom", role: "Vice President - Vice President - ", image: '/team/anas.jpg', borderColor: GRADIENTS.president },
+    { name: "Muhammad Khan", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
     { name: "Sara Metwaly", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
     { name: "Dania Al-Batany", role: "Secretary - Secretary - Secretary - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
     { name: "Mohamed Ali", role: "Treasurer - Treasurer - Treasurer - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },

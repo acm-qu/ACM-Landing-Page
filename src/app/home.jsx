@@ -20,7 +20,6 @@ const Home = () => {
         <Events />
         {/* Current Event - Mariam */}
         <CurrentEvent />
-
         {/* Team - Mariam */}
         <Team />
         {/* Suggestion - Abdelhakim */}

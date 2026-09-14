@@ -8,7 +8,7 @@ export const CTA_1 = "Partner With Us"
 export const CTA_1_LINK = "https://www.linkedin.com/company/acm-qu/"
 
 export const CTA_2 = "Join Us"
-export const CTA_2_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSeMDk3-5B0A2m6yAqwkqPPebE9fP1FXSupT32dYmOeeUHsvbA/closedform"
+export const CTA_2_LINK = "https://forms.gle/KpbG6RDEJyr6Xpot6"
 
 export const HIGHLIGHTS: readonly IHighlight[] = [
   {

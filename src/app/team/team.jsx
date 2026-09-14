@@ -46,7 +46,7 @@ export default function Team() {
           lineHeight: 1.2,
         }}
       >
-        {currentYear !== "2026" ? "Our Past Teams" : "Our Team"}
+        {currentYear !== "2026" ? "Past Board Members" : "The Board"}
       </h2>
       {/* Past year selection */}
       <AnimatePresence>

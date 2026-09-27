@@ -21,7 +21,7 @@ export const PROJECTS:IProject[] = [
   {
     name: "Banner.Redesigned",
     description: "A browser extension that improves the usability of the myBanner portal. It adds a dark mode, improved ui, and different themes.",
-    image: "/projects/banner-redesigned.png",
+    image: "/projects/banner-redesign.png",
     link: "https://github.com/acm-qu/ACM-Banner-Ui-Extension/tree/refactor/rendering-pipieline",
     repo: "https://github.com/acm-qu/ACM-Banner-Ui-Extension"
   },

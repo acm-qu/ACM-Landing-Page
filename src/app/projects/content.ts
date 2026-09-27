@@ -17,5 +17,12 @@ export const PROJECTS:IProject[] = [
     image: "/projects/better-schedule.png",
     link: "https://better-schedule.qu.acm.org",
     repo: "https://github.com/acm-qu/better-schedule"
-  }
+  },
+  {
+    name: "Banner.Redesigned",
+    description: "A browser extension that improves the usability of the myBanner portal. It adds a dark mode, improved ui, and different themes.",
+    image: "/projects/banner-redesigned.png",
+    link: "https://github.com/acm-qu/ACM-Banner-Ui-Extension/tree/refactor/rendering-pipieline",
+    repo: "https://github.com/acm-qu/ACM-Banner-Ui-Extension"
+  },
 ]

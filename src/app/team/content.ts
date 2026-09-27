@@ -15,7 +15,7 @@ export const PRESIDENTS: ITeamMember[] = [
 ]
 
 export const HEADS: ITeamMember[] = [
-  { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events },
+  { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events, quote: "With clear communication comes swift execution" },
   { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "Development only happens after letting go of part of who you are." },
   // { name: "Jawaher", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative },
 ]

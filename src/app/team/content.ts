@@ -16,8 +16,8 @@ export const PRESIDENTS: ITeamMember[] = [
 
 export const HEADS: ITeamMember[] = [
   { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events, quote: "With clear communication comes swift execution" },
-  { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "Development only happens after letting go of part of who you are." },
-  // { name: "Jawaher", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative },
+  { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "Claude make me cool quote make no mistakes" },
+  { name: "Fatima Salama", role: "Lead of the Creative Team - ", image: '/team/fatima.jpg', borderColor: GRADIENTS.creative, quote: "I cant think of a creative quote" },
 ]
 
 export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basically a dictionary/object/hashmap type

@@ -26,6 +26,7 @@ function App() {
           {/* Standalone: ships its own chrome per the design handoff */}
           <Route path="projects/better-schedule" element={<ExternalRedirect to="https://better-schedule.qu.acm.org" />} />
           <Route path="projects/csewiki" element={<ExternalRedirect to="https://csewiki.qu.acm.org" />} />
+          <Route path="projects/banner-redesign" element={<ExternalRedirect to="https://chromewebstore.google.com/detail/jlkacmjcffobfchlhmeeifpgefkaifcn?authuser=1&hl=en" />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </Suspense>

@@ -66,7 +66,7 @@ export default function Events() {
                   src={EVENTS[selectedEvent].images[0]}
                   alt={EVENTS[selectedEvent].alts[0]}
                   initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{
                     ...imagesTransition,
@@ -81,7 +81,7 @@ export default function Events() {
                   src={EVENTS[selectedEvent].images[1]}
                   alt={EVENTS[selectedEvent].alts[1]}
                   initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{
                     ...imagesTransition,
@@ -96,7 +96,7 @@ export default function Events() {
                   src={EVENTS[selectedEvent].images[2]}
                   alt={EVENTS[selectedEvent].alts[2]}
                   initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{
                     ...imagesTransition,

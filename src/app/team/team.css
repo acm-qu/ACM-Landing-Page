@@ -11,7 +11,7 @@
   .to-expand {
     top: 0px;
     opacity: 0;
-    height: calc(50%);
+    height: 50%;
     transition: 1s cubic-bezier(0.00, 0.85, 0.42, 1.00);
   }
   .border {
@@ -27,6 +27,12 @@
     .border {
       scale: 1.15;
     }
+  }
+  &:hover + h4 {
+    margin-top: 12px;
+  }
+  & + h4 {
+    transition: .7s cubic-bezier(0, 0.97, 0.42, 1.00);
   }
 }
 

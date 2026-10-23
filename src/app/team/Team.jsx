@@ -12,13 +12,13 @@ export default function Team() {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: '2rem 0px',      // row gap 2rem, column gap 3rem for second row
-    margin: '0 auto 3rem',
+    gap: '1rem 0px',      // row gap 2rem, column gap 3rem for second row
+    margin: '0px auto 4rem 0',
   };
 
   const firtRowStyle = {
     ...secondRowStyle,
-    margin: '94px auto 6rem',
+    margin: '94px auto 3rem 0',
   }
 
   const [currentYear, setCurrentYear] = useState("2026");
@@ -33,7 +33,7 @@ export default function Team() {
       id="team"
       style={{
         textAlign: 'center',
-        margin: '96px auto 0px auto',
+        margin: '144px auto 0px auto',
         maxWidth: '1147px',
         padding: '1rem',
       }}

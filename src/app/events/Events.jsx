@@ -55,7 +55,7 @@ export default function Events() {
       </div>
       <div className='eventContainerRight'>
         <div className='eventImageContainer'>
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode='sync'>
             <motion.div key={selectedEvent} className='eventImageGroup'>
               {/* In case you are about to puke at this code for not using loops */}
               {/* For some reason the exit animations dont work when I use images.map(=> ...) */}

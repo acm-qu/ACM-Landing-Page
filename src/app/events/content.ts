@@ -1,7 +1,49 @@
 import type { IEvent } from "./types";
 
 export const EVENTS: readonly IEvent[] = [
-{
+  {
+    date: "26 - 10",
+    title: "From Code to Console",
+    link: "https://www.instagram.com/p/DewRNyfAwLO/",
+    description: "Fireside chat took place on October 22, 2026, at Qatar University, presented by the ACM Student Chapter and QU Esports Club with Tmtam Studio. The developers behind Nature Minds shared how a real game goes from prototype to PS5 and Steam through:",
+    bullets: [
+      "Studio journey: Building Tmtam Studio in Qatar and taking Nature Minds from idea to playable demo",
+      "Behind the development: Team workflows, engines and tools, testing what's fun, and the PlayStation release process",
+      "Advice for students: Starting a first game, valuable small-team skills, and the future of Qatar's game dev scene",
+    ],
+    images: [
+      "/events/fctc/fctc-audience.jpg",
+      "/events/fctc/fctc-panel.jpg",
+      "/events/fctc/fctc-final.jpg",
+    ],
+    alts: [
+      "Image of the audience",
+      "Image of the final picture with the guests",
+      "Image of the panel discussion",
+    ]
+  },
+  {
+    date: "26 - 10",
+    title: "The Last Generation of Programmers?",
+    link: "https://www.instagram.com/p/DefFR2wA66g/",
+    description: "The “Last Generation of Programmers?” panel by Qatar University's ACM Student Chapter took place on October 20, 2026, bringing together faculty and researchers to explore what is still worth learning when AI can already do much of the work through:",
+    bullets: [
+      "Expert panel: Faculty from Computer Science & Engineering and the KINDI Center for Computing Research discussed the value of an engineering degree in the AI era",
+      "Critical questions: Trust in AI-generated code, security, accountability, ethics, and specialization versus breadth",
+      "Practical student guidance: Avoiding over-reliance, fact-checking AI output, building soft skills, and AI's impact on hardware and embedded fields",
+    ],
+    images: [
+      "/events/tlgop/tlgop-tamer.jpg",
+      "/events/tlgop/tlgop-panel.jpg",
+      "/events/tlgop/tlgop-junaid.jpg",
+    ],
+    alts: [
+      "Image of professor junaid",
+      "Image of the panel discussion",
+      "Image of professor tamer"
+    ]
+  },
+  {
   date: "25 - 11",
   title: "Introduction to CTF",
   link: "https://www.instagram.com/p/DD2SHf7ggZj/?img_index=1",
@@ -11,10 +53,15 @@ export const EVENTS: readonly IEvent[] = [
     "Broad domain coverage: Network security, web exploitation, cryptography, forensics, Linux, and recon",
     "Hands-on competition prep: Lab sessions simulating real CTF scenarios with Python scripting and competition strategies",
   ],
+  images: [
+    "/events/ctf/ctf-abdullah.jpg",
+    "/events/ctf/ctf-laptop.jpg",
+    "/events/ctf/ctf-screen.jpg"
+  ],
   alts: [
-    "Image placeholder 1",
-    "Image placeholder 2",
-    "Image placeholder 3",
+    "Abdullah teaching CTF",
+    "Laptop with CTF interface",
+    "Screen showing CTF Workshop",
   ]
 },
 {
@@ -39,35 +86,4 @@ export const EVENTS: readonly IEvent[] = [
   ]
 
 },
-{
-  date: "24 - 12",
-  title: "Road to Big Tech",
-  link: "https://www.instagram.com/p/DDrT0fVA-ZK/",
-  description: "The WISE 2024 \"Road to Big Tech\" panel by Qatar University's ACM Student Chapter took place on December 4, 2024, bringing together industry leaders from Meta, Google, and Microsoft to explore how higher education shapes careers in Big Tech through:",
-  bullets: [
-    "Three skill levels: Beginner to advanced tracks tailored for all experience levels",
-    "Expert mentorship: Guided by ICPC finalists and experienced SWEs from the JPC",
-    "Practical learning: Workshops and solving sessions using Codeforces, CSES and more",
-  ],
-  alts: [
-    "Image placeholder 1",
-    "Image placeholder 2",
-    "Image placeholder 3",
-  ]
-},
-{
-  date: "24 - 11",
-  title: "Cyber Awareness 101",
-  link: "http://instagram.com/p/DCySlRmgMie/",
-  description: "Cyber Awareness 101 by Qatar University's ACM Student Chapter took place on November 27, 2024, helping students navigate the digital world securely through:",
-  bullets: [
-    "Expert-led seminar: A cybersecurity professional shares real-world stories and practical tips for staying safe online",
-    "Actionable takeaways: Hands-on insights into modern threats and best practices for everyday digital security",
-  ],
-  alts: [
-    "Image placeholder 1",
-    "Image placeholder 2",
-    "Image placeholder 3"
-  ]
-}
 ];

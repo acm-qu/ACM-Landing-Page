@@ -12,19 +12,19 @@ export const CTA_2_LINK = "https://forms.gle/KpbG6RDEJyr6Xpot6"
 
 export const HIGHLIGHTS: readonly IHighlight[] = [
   {
-    title: "ACM X Camelcode - CTF",
+    title: "ACMO",
+    description: "Our very own AI-powered mascot robot. Its expressive face holds real conversations, and the whole robot was built by the tech team to show what students can create with AI, hardware and code."
+  },
+  {
+    title: "ACM X E-sports: Gamers Week",
+    description: "In collaboration with the Esports Club, we hosted a booth throughout Gamers Week showcasing our custom-built games, and organized a panel discussion on the future of Qatar's game development scene."
+  },
+  {
+    title: "ACM X Camelcode: CTF",
     description: "Collaborated with CamelCode to deliver interactive sessions on Capture The Flag (CTF) competitions, equipping students with essential cybersecurity skills and hands-on experience in ethical hacking."
   },
   {
-    title: "ACM X JPC - Winterbyte",
-    description: "Collaborated with JPC to deliver engaging sessions on competitive programming, consistently challenging students to enhance their problem-solving, data structures, and algorithm skills."
-  },
-  {
-    title: "Road To Big Tech",
-    description: "This dynamic discussion explored how higher education could pave the way to exciting career opportunities at top tech companies."
-  },
-  {
-    title: "Cyber Awareness 101",
-    description: "This session focused on raising awareness about cybersecurity threats and best practices for staying safe online."
+    title: "Trivia",
+    description: "Making trivia sessions that are fun and engaging, while also being educational in the context of technology and computer science."
   },
 ]

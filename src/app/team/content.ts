@@ -11,7 +11,7 @@ const GRADIENTS = {
 export const PRESIDENTS: ITeamMember[] = [
   { name: "Lana Alkasiy", role: "Secretary - Secretary - Secretary - ", image: '/team/lana.jpg', borderColor: GRADIENTS.president, quote: "404: quote not found" },
   { name: "Noor Soueid", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
-  { name: "Dana Hommos", role: "Vice President - Vice President - ", image: '/team/ddana.jpg', borderColor: GRADIENTS.president, quote: "Urgent calls only" },
+  { name: "Dana Hommos", role: "Vice President - Vice President - ", image: '/team/dana.jpg', borderColor: GRADIENTS.president, quote: "Urgent calls only" },
 ]
 
 export const HEADS: ITeamMember[] = [

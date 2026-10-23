@@ -12,9 +12,9 @@ export const EVENTS: readonly IEvent[] = [
       "Advice for students: Starting a first game, valuable small-team skills, and the future of Qatar's game dev scene",
     ],
     images: [
-      "/events/fctc/fctc-audience.jpg",
-      "/events/fctc/fctc-panel.jpg",
-      "/events/fctc/fctc-final.jpg",
+      "/events/fctc/fctc-audience.webp",
+      "/events/fctc/fctc-panel.webp",
+      "/events/fctc/fctc-final.webp",
     ],
     alts: [
       "Image of the audience",
@@ -33,9 +33,9 @@ export const EVENTS: readonly IEvent[] = [
       "Practical student guidance: Avoiding over-reliance, fact-checking AI output, building soft skills, and AI's impact on hardware and embedded fields",
     ],
     images: [
-      "/events/tlgop/tlgop-tamer.jpg",
-      "/events/tlgop/tlgop-panel.jpg",
-      "/events/tlgop/tlgop-junaid.jpg",
+      "/events/tlgop/tlgop-tamer.webp",
+      "/events/tlgop/tlgop-panel.webp",
+      "/events/tlgop/tlgop-junaid.webp",
     ],
     alts: [
       "Image of professor junaid",
@@ -54,9 +54,9 @@ export const EVENTS: readonly IEvent[] = [
     "Hands-on competition prep: Lab sessions simulating real CTF scenarios with Python scripting and competition strategies",
   ],
   images: [
-    "/events/ctf/ctf-abdullah.jpg",
-    "/events/ctf/ctf-laptop.jpg",
-    "/events/ctf/ctf-screen.jpg"
+    "/events/ctf/ctf-abdullah.webp",
+    "/events/ctf/ctf-laptop.webp",
+    "/events/ctf/ctf-screen.webp"
   ],
   alts: [
     "Abdullah teaching CTF",
@@ -75,9 +75,9 @@ export const EVENTS: readonly IEvent[] = [
     "Practical learning: Workshops and solving sessions using Codeforces, CSES and more",
   ],
   images: [
-    "/events/winterbyte/events-pointing.jpg",
-    "/events/winterbyte/events-teaching.jpg",
-    "/events/winterbyte/events-discussion.jpg"
+    "/events/winterbyte/events-pointing.webp",
+    "/events/winterbyte/events-teaching.webp",
+    "/events/winterbyte/events-discussion.webp"
   ],
   alts: [
     "Image of person pointing at screen",

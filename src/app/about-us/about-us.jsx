@@ -16,13 +16,13 @@ const AboutUs = () => {
     <div className="about-content">
       <div className="about-grid">
         <img
-          src="/about-us/about-left-img.jpg"
+          src="/about-us/about-left-img.webp"
           alt="ACM members collaborating"
           className="about-image"
         />
 
         <div className="about-center">
-          <img src="/about-us/about-us-logo.png" alt="acm" className="about-logo" />
+          <img src="/about-us/about-us-logo.webp" alt="acm" className="about-logo" />
           <div className="about-description">
             <p>
               {aboutUs.map((word, i) => <Fragment key={i}>{word} </Fragment>)}
@@ -31,7 +31,7 @@ const AboutUs = () => {
         </div>
 
         <img
-          src="/about-us/about-right-img.jpg"
+          src="/about-us/about-right-img.webp"
           alt="ACM members in session"
           className="about-image"
         />

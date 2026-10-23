@@ -98,8 +98,8 @@ const Hero = () => {
           className={`${classes.partners} ${isMobile ? classes.mobile : ''}`}>
           <p className={classes.label}>Trusted by</p>
           <div className={classes.images}>
-            <img src="/hero/hero-qu-sa.png" height={54} alt="qatar-university-student-affairs" />
-            <img src="/hero/hero-acm.png" height={54} alt="acm" />
+            <img src="/hero/hero-qu-sa.webp" height={54} alt="qatar-university-student-affairs" />
+            <img src="/hero/hero-acm.webp" height={54} alt="acm" />
           </div>
         </motion.div>
       </div>

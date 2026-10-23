@@ -4,7 +4,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <footer className="site-footer">
-      <img src="/footer-logo.png" alt="ACM Qatar University" className="footer-logo" />
+      <img src="/footer-logo.webp" alt="ACM Qatar University" className="footer-logo" />
 
       <nav className="cols">
         <div className="col">

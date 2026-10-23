@@ -60,7 +60,7 @@
 }
 
 /* Square-cornered image slot with a diamond placeholder until the
-   /public/projects/<name>.png asset lands */
+   /public/projects/<name>.webp asset lands */
 .image {
   position: relative;
   aspect-ratio: 16 / 10;

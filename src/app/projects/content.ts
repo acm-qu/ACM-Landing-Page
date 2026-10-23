@@ -7,21 +7,21 @@ export const PROJECTS:IProject[] = [
   {
     name: "CSEWiki",
     description: "A community wiki for Computer Science and Engineering students at Qatar University. Course guides, study resources, and advice, all in one place.",
-    image: "/projects/csewiki.png",
+    image: "/projects/csewiki.webp",
     link: "https://csewiki.qu.acm.org",
     repo: "https://github.com/acm-qu/Enhanced-CSE"
   },
   {
     name: "Better.Schedule",
     description: "Paste your schedule text from myQU or myBanner and get a clean weekly timetable. Customize it, then export it as a PDF or JPEG.",
-    image: "/projects/better-schedule.png",
+    image: "/projects/better-schedule.webp",
     link: "https://better-schedule.qu.acm.org",
     repo: "https://github.com/acm-qu/better-schedule"
   },
   {
     name: "Banner.Redesigned",
     description: "A browser extension that improves the usability of the myBanner portal. It adds a dark mode, improved ui, and different themes.",
-    image: "/projects/banner-redesign.png",
+    image: "/projects/banner-redesign.webp",
     link: "https://chromewebstore.google.com/detail/jlkacmjcffobfchlhmeeifpgefkaifcn?authuser=1&hl=en",
     repo: "https://github.com/acm-qu/ACM-Banner-Ui-Extension"
   },

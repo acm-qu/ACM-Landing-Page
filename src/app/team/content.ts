@@ -9,44 +9,44 @@ const GRADIENTS = {
 }
 
 export const PRESIDENTS: ITeamMember[] = [
-  { name: "Lana Alkasiy", role: "Secretary - Secretary - Secretary - ", image: '/team/lana.jpg', borderColor: GRADIENTS.president, quote: "404: quote not found" },
-  { name: "Noor Soueid", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president, quote: "pleaaaaase just your quote and the website is fully done" },
-  { name: "Dana Hommos", role: "Vice President - Vice President - ", image: '/team/dana.jpg', borderColor: GRADIENTS.president, quote: "Urgent calls only" },
+  { name: "Lana Alkasiy", role: "Secretary - Secretary - Secretary - ", image: '/team/lana.webp', borderColor: GRADIENTS.president, quote: "404: quote not found" },
+  { name: "Noor Soueid", role: "President - President - President - ", image: '/team/lady.webp', borderColor: GRADIENTS.president, quote: "<3" },
+  { name: "Dana Hommos", role: "Vice President - Vice President - ", image: '/team/dana.webp', borderColor: GRADIENTS.president, quote: "Urgent calls only" },
 ]
 
 export const HEADS: ITeamMember[] = [
-  { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.jpeg', borderColor: GRADIENTS.events, quote: "With clear communication comes swift execution" },
-  { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.jpeg', borderColor: GRADIENTS.technical, quote: "Claude make me cool quote make no mistakes" },
+  { name: "Omair Nawaz", role: "Lead of the Events Team - ", image: '/team/omair.webp', borderColor: GRADIENTS.events, quote: "With clear communication comes swift execution" },
+  { name: "Abdelhakim Akhadkhou", role: "Lead of the Technical Team - ", image: '/team/elmiko.webp', borderColor: GRADIENTS.technical, quote: "Claude make me cool quote make no mistakes" },
   { name: "Fatima Salama", role: "Lead of the Creative Team - ", image: '/team/fatima.jpg', borderColor: GRADIENTS.creative, quote: "I cant think of a creative quote" },
 ]
 
 export const PAST_PRESIDENTS: Record<Year, ITeamMember[]> = { // Record is basically a dictionary/object/hashmap type
   "2025": [
-    { name: "Anas Rustom", role: "President - President - President - ", image: '/team/anas2.jpg', borderColor: GRADIENTS.president, quote: "Alhamdulillah, it was a memorable experience, but I wish the ACs in our meetings had Vora.qa" },
-    { name: "Noor Soueid", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
+    { name: "Anas Rustom", role: "President - President - President - ", image: '/team/anas2.webp', borderColor: GRADIENTS.president, quote: "Alhamdulillah, it was a memorable experience, but I wish the ACs in our meetings had Vora.qa" },
+    { name: "Noor Soueid", role: "Vice President - Vice President - ", image: '/team/lady.webp', borderColor: GRADIENTS.president },
   ],
   "2024": [
-    { name: "Anas Rustom", role: "Vice President - Vice President - ", image: '/team/anas.jpg', borderColor: GRADIENTS.president },
-    { name: "Muhammad Khan", role: "President - President - President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
-    { name: "Sara Metwaly", role: "Vice President - Vice President - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
-    { name: "Dania Al-Batany", role: "Secretary - Secretary - Secretary - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
-    { name: "Mohamed Ali", role: "Treasurer - Treasurer - Treasurer - ", image: '/team/lady.jpg', borderColor: GRADIENTS.president },
+    { name: "Anas Rustom", role: "Vice President - Vice President - ", image: '/team/anas.webp', borderColor: GRADIENTS.president },
+    { name: "Muhammad Khan", role: "President - President - President - ", image: '/team/lady.webp', borderColor: GRADIENTS.president },
+    { name: "Sara Metwaly", role: "Vice President - Vice President - ", image: '/team/lady.webp', borderColor: GRADIENTS.president },
+    { name: "Dania Al-Batany", role: "Secretary - Secretary - Secretary - ", image: '/team/lady.webp', borderColor: GRADIENTS.president },
+    { name: "Mohamed Ali", role: "Treasurer - Treasurer - Treasurer - ", image: '/team/lady.webp', borderColor: GRADIENTS.president },
   ]
 }
 
 
 export const PAST_HEADS: Record<Year, ITeamMember[]> = {
   "2025": [
-    { name: "Sifna Nasar", role: "Lead of the Public Relations Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.operations},
-    { name: "Amna Bushra", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative},
-    { name: "Sham Alkhais", role: "Lead of the Event Planning Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.events},
-    { name: "Moaz Jemmieh", role: "Lead of the Event Planning Team - ", image: '/team/moaz.jpg', borderColor: GRADIENTS.events},
-    { name: "Mohamed Al-Ansary", role: "Lead of the Technical Team - ", image: '/team/mohamed.jpg', borderColor: GRADIENTS.technical},
+    { name: "Sifna Nasar", role: "Lead of the Public Relations Team - ", image: '/team/lady.webp', borderColor: GRADIENTS.operations},
+    { name: "Amna Bushra", role: "Lead of the Creative Team - ", image: '/team/lady.webp', borderColor: GRADIENTS.creative},
+    { name: "Sham Alkhais", role: "Lead of the Event Planning Team - ", image: '/team/lady.webp', borderColor: GRADIENTS.events},
+    { name: "Moaz Jemmieh", role: "Lead of the Event Planning Team - ", image: '/team/moaz.webp', borderColor: GRADIENTS.events},
+    { name: "Mohamed Al-Ansary", role: "Lead of the Technical Team - ", image: '/team/mohamed.webp', borderColor: GRADIENTS.technical},
   ],
 
   "2024": [
-    { name: "Faseeh Nawaz", role: "Lead of the Creative Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.creative },
-    { name: "Abdullah Mahran", role: "Lead of the Events Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.events },
-    { name: "Hunzalah Hassan", role: "Lead of the Technical Team - ", image: '/team/lady.jpg', borderColor: GRADIENTS.technical },
+    { name: "Faseeh Nawaz", role: "Lead of the Creative Team - ", image: '/team/lady.webp', borderColor: GRADIENTS.creative },
+    { name: "Abdullah Mahran", role: "Lead of the Events Team - ", image: '/team/lady.webp', borderColor: GRADIENTS.events },
+    { name: "Hunzalah Hassan", role: "Lead of the Technical Team - ", image: '/team/lady.webp', borderColor: GRADIENTS.technical },
   ]
 }

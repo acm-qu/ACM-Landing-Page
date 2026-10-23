@@ -80,7 +80,7 @@ const Splitter = ({ height }) => {
           height="310"
         >
           <image
-            href="/hero/hero-notes.jpg"
+            href="/hero/hero-notes.webp"
             width="464"
             height="310"
             preserveAspectRatio="xMidYMid slice"
@@ -95,7 +95,7 @@ const Splitter = ({ height }) => {
           height="310"
         >
           <image
-            href="/hero/hero-notes-filtered.jpg"
+            href="/hero/hero-notes-filtered.webp"
             width="464"
             height="310"
             preserveAspectRatio="xMidYMid slice"
@@ -137,7 +137,7 @@ const Splitter = ({ height }) => {
           height="311"
         >
           <image
-            href="/hero/hero-acmo.jpg"
+            href="/hero/hero-acmo.webp"
             width="311"
             height="311"
             preserveAspectRatio="xMidYMid slice"
@@ -153,7 +153,7 @@ const Splitter = ({ height }) => {
           height="311"
         >
           <image
-            href="/hero/hero-acmo-filtered.jpg"
+            href="/hero/hero-acmo-filtered.webp"
             width="311"
             height="311"
             preserveAspectRatio="xMidYMid slice"

@@ -8,7 +8,7 @@ import { imagesTransition } from './transitions';
 
 export default function Events() {
 
-  const [selectedEvent, setSelectedEvent] = useState(1);
+  const [selectedEvent, setSelectedEvent] = useState(0);
   const handleSelectEvent = (index) => setSelectedEvent(index);
 
   const classNames= ['pointingPic', 'teachingPic', 'discussionPic'];

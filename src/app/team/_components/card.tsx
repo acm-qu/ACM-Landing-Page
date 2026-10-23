@@ -18,6 +18,7 @@ export function TeamMemberCard({ name, role, image, borderColor, quote, animKey 
           flex: 1,
           maxWidth: '400px',
         }}
+        className={role.split(" ")[0].toLowerCase()}
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: -20 }}
